@@ -1,131 +1,975 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Title
 
-Welcome USER_NAME,
+![Logo Image](/readme_images/logo.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+A ... Web-App developed using Django
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+Source code can be found [here]()
 
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+The live project can be viewed [here]()
 
 ---
 
-Happy coding!
+## Table of Contents
+
+1. [**Purpose of Project**](#purpose-of-project)
+
+2. [**Features**](#features)
+    - [All Users](#all-users)
+    - [Authenticated (Logged in) Users](#authenticated-logged-in-users)
+    - [Staff (Authenticated)](#staff-authenticated)
+    - [Future Features](#future-features)
+
+3. [**User Experience**](#User-Experience)
+    - [Design](#design)
+        - [Fonts](#fonts)
+        - [Colour](#colour)
+        - [Wireframes](#wireframes)
+
+4. [**Development Process**](#development-process)
+    - [Project Planning](#project-planning-and-documentation-using-gitHub)
+    - [Search Engine Optimization](#search-engine-optimization)
+    - [Data Model](#data-model)
+    - [Data Validation](#data-validation)
+
+5. [**Testing**](#Testing)
+    - [Manual Testing](#manual-testing)
+        - [Feature Testing](#feature-testing)
+        - [Responsiveness](#responsiveness)
+        - [Lighthouse](#lighthouse)
+    - [Validation Testing](#validation-testing)
+    - [User Story Testing](#user-story-testing)
+    - [Automated Testing](#automated-testing)
+
+6. [**Bugs**](#Bugs)
+
+7. [**Libraries and Programs Used**](#libraries-and-programs-used)
+
+8. [**Deployment**](#Deployment)
+    - [Making a Local Clone](#making-a-local-clone)
+    - [Running in Local Environment](#running-in-local-environment)
+    - [Deploying to Heroku](#deploying-to-heroku)
+
+9. [**Credits**](#credits)
+
+10. [**Acknowledgements**](#acknowledgements)
+
+---
+
+# Purpose of Project
+
+<!-- Purpose of project - overview paragraph -->
+
+<!-- Target Audience -->
+
+![responsivenes_screenshot](/readme_images/responsiveness_image.png)
+
+---
+
+[Return to top](#title)
+
+# Features
+
+This section outlines the key features available to different types of users within the project. It describes pages and functionalities accessible to all users, authenticated users, and staff, highlighting the significance of each feature. Additionally, it includes a look at potential future features that could further enhance the user experience.
+
+## All Users
+The following pages are visible to all users, logged in or not.
+
+<details>
+<summary>Homepage (landing page)</summary>
+
+<!-- Page Description of features -->
+
+![Hero Section](/readme_images/feature_section/Home-1.png) 
+
+</details>
+
+<details>
+<summary>... Page</summary>
+
+![Hero Section](/readme_images/feature_section/Home-1.png) 
+
+</details>
+
+<details>
+<summary>... Page</summary>
+
+
+
+![Booking Page](/readme_images/feature_section/booking-1.png)
+
+</details>
+
+<details>
+<summary>Contact Page</summary>
+This page simply shows the navbar and the footer which takes up the whole viewport as this displays the contact details in a clear manner.
+
+- The footer is consistent across all pages and divided into four sections:  
+  - **Company Logo**: Clickable, redirects users to the landing page.  
+  - **Opening Hours**: Displays the business hours.  
+  - **Address**: Shows the physical location of the business.  
+  - **Get in Touch and Socials**: Provides contact details and social media links. 
+
+![Contact Page](/readme_images/feature_section/contact.png)
+
+</details>
+
+<details>
+<summary>Login Page</summary>
+
+This is the standard allauth login page, styled with the site styling.
+
+![Login Page](/readme_images/feature_section/login.png)
+
+</details>
+
+<details>
+<summary>Register Page</summary>
+
+This is the standard allauth signup page, with fields for email, username, and password + password confirmation. All fields bar the email are required.
+
+![Register Page](/readme_images/feature_section/signup.png)
+
+</details>
+
+## Authenticated (Logged in) Users
+The following pages are only available to logged in users.
+
+<details>
+<summary>... Page</summary>
+
+![Book a Table Page](/readme_images/feature_section/booking-2.png)
+
+</details>
+
+<details>
+<summary>... Page</summary>
+
+![Booking Success](/readme_images/feature_section/booking-3.png)
+
+</details>
+
+## Customer (Authenticated)
+The following page is only accessible by the individual customer:
+
+<details>
+<summary>User Dashboard Page</summary>
+
+![Customer Dashboard Page](/readme_images/feature_section/customer-dashboard.png)
+
+</details>
+
+<details>
+<summary>... Page</summary>
+
+![Update Bookings Page](/readme_images/feature_section/update_booking-3.png)
+
+</details>
+
+<details>
+<summary>... Page</summary>
+
+![Update Bookings Page](/readme_images/feature_section/update_booking-4.png)
+
+</details>
+
+## Staff (Authenticated)
+The following pages are only accessible by staff
+
+<details>
+<summary>... Page</summary>
+
+![Staff Dashboard Page](/readme_images/feature_section/staff-dashboard.png)
+
+</details>
+
+<details>
+<summary>.... Page</summary>
+
+![Manage Bookings Page](/readme_images/feature_section/manage_booking-2.png)
+
+</details>
+
+<details>
+<summary>... Page - Staff</summary>
+
+![Update Bookings Page](/readme_images/feature_section/update_booking-2.png)
+
+</details>
+
+## Admin/Superusers (Authenticated)
+The following pages are only accessible by admin:
+
+<details>
+<summary>... Page</summary>
+
+![Admin Dashboard Page](/readme_images/feature_section/admin-dashboard.png)
+
+</details>
+
+<details>
+<summary>... Page</summary>
+
+![Menu Page](/readme_images/feature_section/menu-3.png)
+
+</details>
+
+
+## Future Features
+<!-- List Future Features -->
+
+---
+
+[Return to top](#title)
+
+# User Experience
+
+This section details the key elements of the user experience (UX) design for the project, including visual design choices, color schemes, typography, and wireframes. It provides insight into the aesthetic and functional decisions made to enhance usability across different devices, ensuring a seamless and accessible experience for users.
+
+## Design
+
+### Fonts
+
+<!-- Amend Paragraph in Style Below -->
+
+The Montserrat font was used throughout the project for headings and prominent text. It's a clean, modern sans-serif font with a strong, professional look, making it ideal for a refined restaurant like Cedar and Flame. Its bold, uppercase styling helps convey a sense of sophistication and presence.
+
+For body text, Open Sans was chosen due to its simplicity and high legibility, providing a comfortable reading experience for users. Its versatility and neutral design make it well-suited for longer content while maintaining a polished, cohesive aesthetic across the site.
+
+### Colour
+The following colour palette was used in the project:
+
+![colour_palette](/readme_images/colours/cedar_and_flame_colour_palette.png)
+
+<!-- List Colours - and significance -->
+
+#### _Colour Contrast (Font against Background)_
+
+<!-- Coolers contrast checker - foreground v background -->
+
+<details>
+<summary>#F5F5F5 (White Smoke) and #333333 (Jet)</summary>
+
+![contrast-white_smoke-jet](/readme_images/colours/contrast-white_smoke-jet.png)
+
+</details>
+
+<details>
+<summary>#F5F5F5 (White Smoke) and #444444 (Onyx)</summary>
+
+![contrast-white_smoke-onyx](/readme_images/colours/contrast-white_smoke-onyx.png)
+
+</details>
+
+### Wireframes
+These wireframes illustrate how each page is designed to adapt across various screen sizes, including Mobile, Tablet, Desktop, and Larger Screens. While the overall layout remains consistent, adjustments have been made to optimize the user experience for each viewport. Key differences include variations in button placement, layout, and card arrangements to ensure usability and visual clarity across devices.
+
+#### _Homepage (Landing Page)_
+
+<details>
+<summary>Mobile</summary>
+
+![homepage-mobile wireframe](/readme_images/wireframes/homepage-mobile.png)
+
+</details>
+
+<details>
+<summary>Tablet</summary>
+
+![homepage-tablet wireframe](/readme_images/wireframes/homepage-tablet.png)
+
+</details>
+
+<details>
+<summary>Desktop</summary>
+
+![homepage-desktop wireframe](/readme_images/wireframes/homepage-desktop.png)
+
+</details>
+
+#### _Contact Page_
+
+<details>
+<summary>Mobile</summary>
+
+![contact-mobile wireframe](/readme_images/wireframes/contact-mobile.png)
+
+</details>
+
+<details>
+<summary>Tablet</summary>
+
+![contact-tablet wireframe](/readme_images/wireframes/contact-tablet.png)
+
+</details>
+
+<details>
+<summary>Desktop</summary>
+
+![contact-desktop wireframe](/readme_images/wireframes/contact-desktop.png)
+
+</details>
+
+#### _Customer Dashboard_
+
+<details>
+<summary>Mobile</summary>
+
+![welcome_page wireframe](/readme_images/wireframes/customer_dashboard-mobile.png)
+
+</details>
+
+<details>
+<summary>Tablet</summary>
+
+![welcome_page wireframe](/readme_images/wireframes/customer_dashboard-tablet.png)
+
+</details>
+
+<details>
+<summary>Desktop</summary>
+
+![welcome_page wireframe](/readme_images/wireframes/customer_dashboard-desktop.png)
+
+</details>
+
+#### _Staff Dashboard_
+
+<details>
+<summary>Mobile</summary>
+
+![staff_dashboard-mobile wireframe](/readme_images/wireframes/staff_dashboard-mobile.png)
+
+</details>
+
+<details>
+<summary>Tablet</summary>
+
+![staff_dashboard-tablet wireframe](/readme_images/wireframes/staff_dashboard-tablet.png)
+
+</details>
+
+<details>
+<summary>Desktop</summary>
+
+![staff_dashboard-desktop wireframe](/readme_images/wireframes/staff_dashboard-desktop.png)
+
+</details>
+
+#### _Admin Dashboard_
+
+<details>
+<summary>Mobile</summary>
+
+![admin_dashboard-mobile wireframe](/readme_images/wireframes/admin_dashboard-mobile.png)
+
+</details>
+
+<details>
+<summary>Tablet</summary>
+
+![admin_dashboard-tablet wireframe](/readme_images/wireframes/admin_dashboard-tablet.png)
+
+</details>
+
+<details>
+<summary>Desktop</summary>
+
+![admin_dashboard-desktop wireframe](/readme_images/wireframes/admin_dashboard-desktop.png)
+
+</details>
+
+---
+
+[Return to top](#title)
+
+# Development Process
+
+The development process for this project was carefully planned and documented to ensure efficient progress and transparency. This section outlines how the project was broken down into manageable tasks, tracked, and prioritized using GitHub Issues and Projects. It also covers the key steps taken, including project planning, SEO, data modeling, and data validation. Each sub-section provides a detailed look at the tools and methods used to guide development from initial planning to implementation.
+
+## Project Planning and Documentation Using GitHub
+GitHub Issues were used to document the development steps undertaken in the project. 
+Two issue templates were created: one for [User Epics]() and another for [User Stories]().
+A variety of labels were applied to categorise issue types, such as Bugs, User Epics and User Stories, with the parent epic and child story being associated with the same label for easy identificaion.
+MoSCoW prioritisation was applied using the labels must-have, should-have, and could-have.
+
+The project was broken down into manageable sprints using GitHub Projects, which provided a Kanban board. Issues were posted to the board and moved from "Todo" to "In Progress" to "Done" as they were completed. Due to time constraints, only Iteration 1 was completed, though future iterations were planned. This initial planning outlines the anticipated development of the application.
+
+The iterations are documented here :
+  - [MVP]()
+  - [Iteration 2]()
+  - [Iteration 3]()
+
+The User Epics and their related User Stories are as follows:
+<!-- Add stories and epics from github -->
+- Epic : []()
+    - Story : []()
+    - Story : []()
+    - Story : []()
+
+## Data Model
+This section provides an overview of the data models used in the project, represented through Entity-Relationship Diagrams (ERDs) for each application. Each sub-heading corresponds to a specific app, detailing its database schema and the relationships between key entities. These ERDs were drawn using [Lucidchart](https://www.lucidchart.com/pages/) and offer a clear visualization of how data is structured and flows within the application.
+
+<!-- Model Description in style below -->
+
+### Booking App
+
+![Entity-relationship diagram for Booking App](readme_images/erd/ERD-booking.png)
+
+#### `Table` Table:
+The `Table` table stores information about tables available at the restaurant. Key fields include:
+- `id`: A unique identifier for each table (primary key).
+- `table_number`: The identifier or number of the table.
+- `capacity`: The number of people the table can accommodate.
+- `is_available`: A boolean flag to indicate whether the table is available for booking.
+
+#### `User` Table:
+The `User` table corresponds to the users in the system (using the Django user model for authentication and permissions). Key fields include:
+- `id`: A unique identifier for each user (primary key).
+- `username`: The user's chosen username.
+- `email`: The user's email address.
+- `password`: A hashed version of the user's password.
+- `is_staff`: A boolean flag indicating if the user has staff privileges.
+- `is_superuser`: A boolean flag indicating if the user has superuser privileges.
+- `first_name`: The user's first name.
+- `last_name`: The user's last name.
+- `date_joined`: Timestamp for when the user account was created.
+- `last_login`: Timestamp for the user's most recent login.
+
+#### `Booking` Table:
+The `Booking` table records reservations made by users for specific tables at certain times. Key fields include:
+- `id`: A unique identifier for each booking (primary key).
+- `user`: A foreign key linking to the `User` table, indicating who made the booking.
+- `date`: The date of the reservation.
+- `time`: The time of the reservation.
+- `number_of_people`: The number of people included in the booking.
+- `additional_notes`: Any extra details or special requests for the booking.
+- `status`: The status of the booking (e.g., confirmed, pending, canceled), likely represented as an enum or choice field.
+- `table`: A foreign key linking to the `Table` table, indicating which table is reserved.
+- `created_at`: Timestamp for when the booking was created.
+- `updated_at`: Timestamp for when the booking was last updated.
+
+#### Relationships:
+1. **User to Booking**: 
+   - A one-to-many relationship exists between the `User` and `Booking` tables. One user can make multiple bookings, but each booking is made by a single user.
+   
+2. **Table to Booking**: 
+   - A one-to-many relationship exists between the `Table` and `Booking` tables. Each table can have multiple bookings over time, but each booking refers to one specific table.
+
+#### `on_delete` Considerations
+
+- **User Deletion**:  
+  If a user is deleted, the `Booking` records associated with that user are retained, and the `user` field in those records is set to `null`. This ensures that the historical booking data remains intact for analytics, but without a reference to a non-existent user.
+
+- **Table Deletion**:  
+  If a table is deleted, all bookings associated with that table will be deleted, ensuring no invalid references to missing tables exist in the system.
+
+These tables allow the system to manage users, track reservations, and ensure that tables are properly allocated based on availability and bookings.
+
+### Core App
+
+This app does not contain any models. It is designed to serve as a container for the homepage and contact page, which do not require interaction with any models.
+
+## Data Validation
+
+<!-- Any specific custom validation - Js/python -->
+
+---
+
+[Return to top](#title)
+
+# Testing
+
+The Testing section covers various strategies used to ensure the application's functionality and quality. This includes **manual testing** for hands-on verification, **validator testing** to check data integrity, **user story testing** to confirm features meet user requirements, and **automated testing** to streamline repeated tests and ensure consistent performance throughout development. Each approach contributes to a robust, error-free application.
+
+## Manual Testing
+
+### Feature Testing
+The manual testing of features is organised by app below. Testing was carried out on a 1920 x 1080 desktop screen, a Samsung tablet and an Samsung S22 Ultra.
+
+<!-- In style below -->
+
+<details>
+<summary>Core App, Navbar and Footer</summary>
+
+|Page|Feature|Action|Effect|
+|---|---|---|---|
+|/|Hero Image and Company Logo appear|Navigate to page|Elements appear correctly|
+|/|'Menu' button links to /menu/ page|Click button|User is redirected to correct page|
+|/|'Book a Table' button links to /booking/ page|Click button|User is redirected to correct page|
+|/|Navbar - Logo button causes page to reload|Click logo|Page reloads/redirects to homepage if not already on it|
+|/|Navbar - small screens - dropdown icon reveals all nav links|Click dropdown button|Correct Links appear|
+|/|Navbar - larger screens - all nav-links visible|Navigate to page|Elements appear correctly|
+|/|Navbar - larger screens - all nav-links visible|Navigate to page|Elements appear correctly|
+|/|Navbar - Home link leads to / |Click link|User redirected to home page|
+|/|Navbar - Authenticated customer - Customer Dashboard link leads to /customer-dashboard/ |Click link|User redirected to Customer Dashboard page|
+|/|Navbar - Authenticated staff/admin - Staff Dashboard link leads to /staff-dashboard/ |Click link|User redirected to Staff Dashboard page|
+|/|Navbar - Authenticated admin - Admin Dashboard link leads to /admin-dashboard/ |Click link|User redirected to Admin Dashboard page|
+|/|Navbar - Menu link leads to /menu/|Click link|User redirected to Menu page|
+|/|Navbar - Book a Table link leads to /booking/|Click link|User redirected to Booking page|
+|/|Navbar - Authenticated staff/admin - Manage Bookings link leads to /manage-booking/ |Click link|User redirected to Manage Bookings page|
+|/|Navbar - Contact link leads to /contact/|Click link|User redirected to Contact page|
+|/|Navbar - Login link leads to /login/|Click link|User redirected to Login page|
+|/|Navbar - Sign Up link leads to /signup/|Click link|User redirected to Sign Up page|
+|/|Navbar - Authenticated users (all) - Logout link leads to / |Click link|User redirected to Home page|
+|/|Footer - Logo image causes page to reload|Click logo|Page reloads/redirects to homepage if not already on it|
+|/contact/|Logo images redirects user to homepage|Click logo|Page redirects to homepage|
+|||||
+
+</details>
+
+<details>
+<summary>Dashboard App</summary>
+
+|Page|Feature|Action|Effect|
+|---|---|---|---|
+|/customer-dashboard/<int:user_id>/|Unauthorised user - attempt to access a customer dashboard|Search customer-dashboard/n (n is any integer)|User is redirected to the homepage with an error message advising unauthorised access|
+|/customer-dashboard/<int:user_id>/|Authorised customer - unable to access another customer's dashboard|Search customer-dashboard/n (n is any integer - not this user's id)|Error message advising unauthorised access appears|
+|/customer-dashboard/<int:user_id>/|Authorised customer - access to personal dashboard|Login as customer and click customer dashboard nav-link|Access personal customer dashboard|
+|/customer-dashboard/<int:user_id>/|View Upcoming/Past Bookings|Make a booking and return to dashboard|View Upcoming/Past Bookings in table sections|
+|/customer-dashboard/<int:user_id>/|If no bookings - message appears|No Bookings exist|Message appears advising no bookings exist|
+|/customer-dashboard/<int:user_id>/|Edit an upcoming booking|Click Edit button next to a booking|Redirects to /edit-booking/<int:booking_id>/|
+|/customer-dashboard/<int:user_id>/|Delete an upcoming booking|Click Delete button next to a booking|Open a delete modal requiring delete confirmation|
+|/customer-dashboard/<int:user_id>/|Customer confirmation required section - hidden|No Bookings exist in this status|Section is not visible|
+|/customer-dashboard/<int:user_id>/|View bookings requiring customer approval|Booking requiring Customer Action exists|Django message displayed in dashboard to indicate user action required|
+|/customer-dashboard/<int:user_id>/|Book a table|Click button to book a table|Redirects to booking page|
+|/customer-dashboard/<int:user_id>/|View Menu|Click button to view|Redirects to menu page|
+|/staff-dashboard/|Unauthorised user|Access page via URL|Redirects to homepage with message advising unauthorised access|
+|/staff-dashboard/|Authenticated Staff - View Overview of today|Click Staff Dashboard in Navbar|View Bookings for today in a table and dynamic table availability for today|
+|/staff-dashboard/|Authenticated Staff - No bookings today|Access staff dashboard on a day with no bookings|Table shows advising no bookings today|
+|/staff-dashboard/|Authenticated Staff - Navigate to Manage all bookings page|Click 'Manage Bookings' button|Redirects to manage bookings page|
+|/staff-dashboard/|Authenticated Staff - Edit a booking|Click Edit button|Redirects to edit booking page|
+|/staff-dashboard/|Authenticated Staff - Delete a booking|Click Delete button|Delete modal appears requiring confirmation of deletion|
+|/admin-dashboard/|Unauthorised user|Access page via URL|Redirects to homepage with message advising unauthorised access|
+|/admin-dashboard/|Authenticated Admin - View Analytics|Access page via navbar|View bootstrap cards with overall analytical information|
+|/admin-dashboard/|Authenticated Admin - View Analytics by filter|Click relevant filter from dropdown and apply|Displays card for defined time period as well as a table of all bookings in that time period|
+|/admin-dashboard/|Authenticated Admin - Navigate to Manage all bookings page|Click 'Manage Bookings' button|Redirects to manage bookings page|
+|/admin-dashboard/|Authenticated Admin - Navigate to Menu page|Click 'Manage Menu' button|Redirects to menu page|
+|||||
+</details>
+
+<details>
+<summary>Menu App</summary>
+
+|Page|Feature|Action|Effect|
+|---|---|---|---|
+|/menu/|All Users - view menu item in more detail|Click Menu Item Header|Menu Item Modal appears|
+|/menu/|Admin can edit a menu item|Click edit button next to menu item|Redirects to edit menu page|
+|/menu/|Admin can create a menu item|Click create button in relevant category|Redirects to create menu item page|
+|/menu/|Admin can delete a menu item|Click delete button next to menu item|Opens a delete modal requiring delete confirmation|
+|/menu/create-menu-item/<str:category_label>/|Unauthorised user|Access page via URL|Redirects to homepage with message advising unauthorised access|
+|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - View form to create a menu item in the associated category|Click edit on any menu item in menu page|Form appears with name, description, image, price, and availability fields|
+|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Submit valid data|Fill name, description, and set positive price value - click submit|Form submits and redirects to menu page with Django message; menu item appears in associated category|
+|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Submit placeholder image|Leave image field empty and submit form|Default placeholder image is applied to menu item|
+|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Submit new image|Add image file|Image is shown when accessing menu item modal on the menu page|
+|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Cannot submit negative numbers|Add negative price|Form does not submit, and validation error is shown|
+|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Cannot submit numbers with more than 2 decimal places|Add number to 3 decimal places or more|Form does not submit, and validation error is shown|
+|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Submit price without defining decimal value|Add Integer/float to 1 decimal place in price field|Form submits and automatically rounds to 2 decimal places|
+|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Cancel creation of menu item|Click cancel button|Redirects to the menu page|
+|/menu/edit-menu-item/<int:menu_item_id>/|Unauthorised user|Access page via URL|Redirects to homepage with message advising unauthorised access|
+|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - View form to edit a menu item in the associated category|Click edit on any menu item in menu page|Form appears with name, description, image, price, availability fields, and current image preview prepopulated with existing data|
+|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - Leave image unchanged|Leave image field empty and submit form|Existing image is applied|
+|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - Cannot submit negative numbers|Add negative price|Form does not submit, and validation error is shown|
+|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - Cannot submit numbers with more than 2 decimal places|Add number to 3 decimal places or more|Form does not submit, and validation error is shown|
+|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - Submit price without defining decimal value|Add Integer/float to 1 decimal place in price field|Form submits and automatically rounds to 2 decimal places|
+|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - Cancel creation of menu item|Click cancel button|Redirects to the menu page|
+|||||
+</details>
+
+<details>
+<summary>Booking App</summary>
+
+|Page|Feature|Action|Effect|
+|---|---|---|---|
+|/book-table/|Unauthenticated users - login required prompt|Access Book A Table page without logging in|See prompt to login/register to book a table|
+|/book-table/|Unauthenticated users - login required prompt|Click login|Redirects to login page|
+|/book-table/|Unauthenticated users - login required prompt|Click register|Redirects to register page|
+|/book-table/|Authenticated users - Booking Form appears|Access Book A Table page|Displays booking form|
+|/book-table/|Authenticated users - Select Date|Click Date Widget|Calendar appears|
+|/book-table/|Authenticated users - Select Invalid Date|Click Date Widget|Invalid dates are not selectable|
+|/book-table/|Authenticated users - Select Valid Time|Click Time Widget|Dropdown of times matching opening hours appears|
+|/book-table/|Authenticated users - Select Invalid Time|Type a time outside opening hours|Validation error message appears|
+|/book-table/|Authenticated users - Select Valid Number of People|Click Incrementer/type number|Number increments|
+|/book-table/|Authenticated users - Select Valid Number of People|Click Incrementer down|Number min is 1|
+|/book-table/|Authenticated users - Select Valid Number of People|Click Incrementer up repetitively|Number max is 12|
+|/book-table/|Authenticated users - Select invalid Number of People|Type number not between 1 and 12|Form alerts to invalid number and advises limits|
+|/book-table/|Authenticated users - Additional Notes|Add/don't add notes|No impact|
+|/book-table/|Authenticated users - Submit Valid Booking|Fill form fields validly and click submit|Redirected to booking success page|
+|/book-table/|Authenticated users - Submit Invalid Booking|Fill form fields invalidly and click submit|Booking does not submit - form fields with invalid data will be highlighted|
+|/booking-success/<int:booking_id>/|Authenticated users booking|Submit a valid booking|View booking overview and navigation buttons for dashboard or menu|
+|/booking-success/<int:booking_id>/|Authenticated users booking - Navigate to Dashboard|Click "Your Dashboard" button|Redirects to customer-specific dashboard or staff/admin dashboard depending on role|
+|/booking-success/<int:booking_id>/|Authenticated users booking - Navigate to Menu|Click "Menu" button|Redirects to menu page|
+|/edit-booking/<int:booking_id>/|Authenticated users booking - Redefine booking details for an upcoming booking|Click Edit Button for upcoming booking in customer dashboard|View existing booking details and booking form below|
+|/edit-booking/<int:booking_id>/|Authenticated users booking - Redefine booking details for an upcoming booking - valid|Edit any form details and submit|Redirects to customer dashboard and displays message updated booking status|
+|/edit-booking/<int:booking_id>/|Authenticated users booking - Redefine booking details for an upcoming booking - valid - previously confirmed status|Edit any form details and submit|Redirects to customer dashboard and displays message updated booking status - booking status changed to pending|
+|/edit-booking/<int:booking_id>/|Authenticated users booking - customer confirmation required booking|Click Edit button in relevant table in customer dashboard|View booking details and a form with only status field and submit button|
+|/edit-booking/<int:booking_id>/|Authenticated users booking - customer confirmation required booking|Click confirmed status and submit|Redirected to customer dashboard and booking now shows in upcoming bookings as confirmed|
+|/edit-booking/<int:booking_id>/|Authenticated users booking - customer confirmation required booking|Click cancelled status and submit|Redirected to customer dashboard and booking no longer visible in upcoming bookings|
+|/edit-booking/<int:booking_id>/|Unauthenticated users booking|Attempt to access via URL|Redirects to homepage with message advising unauthorised access|
+|/manage-booking/<int:booking_id>/|Unauthenticated users|Attempt to access via URL|Redirects to homepage with message advising unauthorised access|
+|/manage-booking/<int:booking_id>/|Authenticated users but not staff|Attempt to access via URL|Redirects to homepage with message advising unauthorised access|
+|/manage-booking/<int:booking_id>/|Authenticated Staff|Click button in staff dashboard/navigate via navbar|Displays bookings of all statuses in relevant tables - scrollable|
+|/manage-booking/<int:booking_id>/|Authenticated Staff can edit a booking|Click edit button|Redirects to edit booking page|
+|/manage-booking/<int:booking_id>/|Authenticated Staff can delete a booking|Click delete button|Opens a delete modal requiring confirmation of delete|
+|/edit-booking/<int:booking_id>/|Authenticated Staff|Click edit button in manage bookings page|View particular booking details, table availability on the day, and the update booking form|
+|/edit-booking/<int:booking_id>/|Authenticated Staff - amend booking time|Click time widget|View times associated with opening hours|
+|/edit-booking/<int:booking_id>/|Authenticated Staff - can assign table|Click dropdown of table field|View tables filtered to meet capacity size of booking|
+|/edit-booking/<int:booking_id>/|Authenticated Staff - cannot assign occupied table - prevent double booking|Select an occupied table and submit booking|Validation error and error message indicating table is occupied will appear|
+|/edit-booking/<int:booking_id>/|Authenticated Staff - can see table availability in a table|Look at Table availability table|Green cells advise available and red is occupied for a particular time - staff can amend time as required|
+|/edit-booking/<int:booking_id>/|Authenticated Staff - change booking status|Click status form field|Can select 'confirmed' (preselected), 'cancelled', 'completed', or 'customer confirmation required'|
+|/edit-booking/<int:booking_id>/|Authenticated Staff - cancel a change to a booking|Click cancel button|Redirected to manage bookings page|
+|/edit-booking/<int:booking_id>/|Authenticated users booking - cancel a change to a booking|Click cancel button|Redirected to customer dashboard page|
+|/manage-booking/<int:booking_id>/|Bookings marked as confirmed - if time passes - marked as no show automatically if status not directly changed|Allow a confirmed booking time to pass|Booking status is automatically changed to no show|
+|||||
+</details>
+
+### Responsiveness
+All pages on the live site were tested with the default list of devices in Chrome Devtools. Special attention was given to ensuring the hero image carousel displayed optimally across screen breakpoints, with images specifically optimized for responsive viewing.
+
+### Lighthouse
+The Lighthouse testing was carried out using a chrome extension which can be found [here](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
+The results are displayed by page below:
+
+<details>
+<summary>Lighthouse results by page</summary>
+
+- Homepage (Landing Page)
+
+![index_lighthouse](readme_images/lighthouse/index_lighthouse.png)
+
+- Menu Page
+
+![menu_lighthouse](readme_images/lighthouse/menu_lighthouse.png)
+
+- Booking Page
+
+![booking_lighthouse](readme_images/lighthouse/booking_lighthouse.png)
+
+- Contact Page
+
+![contact_lighthouse](readme_images/lighthouse/contact_lighthouse.png)
+
+- Login Page
+
+![login_lighthouse](readme_images/lighthouse/login_lighthouse.png)
+
+- Sign Up Page
+
+![signup_lighthouse](readme_images/lighthouse/signup_lighthouse.png)
+
+- All other pages are protected so are inaccessible with the lighthouse extension
+
+![protected_lighthouse](readme_images/lighthouse/protected_lighthouse.png)
+
+</details>
+
+## Validation Testing
+
+### Python Validation
+
+All python code is validated by the [Flake8 linter](https://flake8.pycqa.org/en/latest/) (installed in VSCode) and [CI Python Linter](https://pep8ci.herokuapp.com/). The exceptions to this were django migration files, urls and similar files. However, any custom models, views and forms were validated. I have separated this by app:
+
+<details>
+<summary>Core App</summary>
+
+- views.py
+
+![core_views_python_validation](/readme_images/python_validation/core_views_python_validation.png)
+
+</details>
+
+<details>
+<summary>Dashboard App</summary>
+
+- views.py
+
+![Python Validation](/readme_images/python_validation/dashboard-python_validation.png)
+
+</details>
+
+<details>
+<summary>Booking App</summary>
+
+- models.py
+
+![booking_models_python_validation](/readme_images/python_validation/booking_models_python_validation.png)
+
+- forms.py
+
+![booking_forms_python_validation](/readme_images/python_validation/booking_forms_python_validation.png)
+
+- views.py
+
+![booking_views_python_validation](/readme_images/python_validation/booking_views_python_validation.png)
+
+- admin.py
+
+![booking_admin.py_python_validation](/readme_images/python_validation/booking_admin.py_python_validation.png)
+
+- utils.py
+
+![booking_utils_python_validation](/readme_images/python_validation/booking_utils_python_validation.png)
+
+- test_models.py
+
+![booking_test_models_python_validation](/readme_images/python_validation/booking_test_models_python_validation.png)
+
+Validation of test_forms.py and test_views.py to be completed once the referenced bug has been fixed - see [Remaining Bugs](#remaining-bugs)
+
+</details>
+
+<details>
+<summary>Menu App</summary>
+
+- models.py
+
+![menu_models_python_validation](/readme_images/python_validation/menu_models_python_validation.png)
+
+- forms.py
+
+![menu_forms_python_validation](/readme_images/python_validation/menu_forms_python_validation.png)
+
+- views.py
+
+![menu_views_python_validation](/readme_images/python_validation/menu_views_python_validation.png)
+
+- admin.py
+
+![menu_admin_python_validation](/readme_images/python_validation/menu_admin_python_validation.png)
+
+- test_models.py
+
+![menu_test_models_python_validation](/readme_images/python_validation/menu_test_models_python_validation.png)
+
+- test_forms.py
+
+![menu_test_forms_python_validation](/readme_images/python_validation/menu_test_forms_python_validation.png)
+
+- test_views.py
+
+![menu_test_views_python_validation](/readme_images/python_validation/menu_test_views_python_validation.png)
+
+</details>
+
+### JavaScript Validation
+
+All JavaScript code is validated by the [ESLint](https://eslint.org/) (installed in VSCode) and [JS Hinterface](https://mfs4711.github.io/jshint-api/). Custom JS was present only in the Booking and Menu Apps respectively.
+
+<details>
+<summary>Booking App</summary>
+
+![booking_js-validation](/readme_images/js_validation/booking_js-validation.png)
+
+</details>
+
+<details>
+<summary>Menu App</summary>
+
+![menu_js-validation](/readme_images/js_validation/menu_js-validation.png)
+
+</details>
+
+### HTML Validation
+
+All HTML was validating using the page source of the deployed project using [W3C Markup Validation Service](https://validator.w3.org/). All pages were clear of all errors/warnings. There was only one page where an additonal factor was noted. This was on the menu page which had an 'info' warning. This was related to the way the Cloudinary image is used in the menu item modal.
+
+<details>
+<summary>Menu Page</summary>
+
+![menu.html_html_validation](/readme_images/html%20validation/menu.html_html_validation.png)
+
+</details>
+
+<details>
+<summary>All Other Pages</summary>
+
+![all-other-pages_html_validation](/readme_images/html%20validation/all-other-pages_html_validation.png)
+
+</details>
+
+### CSS Validation
+
+The single CSS file was validated using the [W3C Validation Service](https://jigsaw.w3.org/css-validator/)
+
+<details>
+<summary>Results</summary>
+
+![CSS Validation](/readme_images/css_validation/css_validation.png)
+
+</details>
+
+## User Story Testing
+The User Epics and Stories for this project are documented across 3 GitHub Projects, each corresponding to a specific iteration of the development work. However, as already mentioned only Iteration 1 has been addressed thus far with the remaining Iterations noted as part of future implementation. You can find the relevant Iterations here:
+
+- [Iteration 1](https://github.com/users/MFS4711/projects/5)
+- [Iteration 2](https://github.com/MFS4711/Restaurant-Web-App/milestone/2)
+- [Iteration 3](https://github.com/MFS4711/Restaurant-Web-App/milestone/3)
+
+Alternatively, the Epics and Stories are individually linked here :
+
+- [Epics and Stories](#development-process)
+
+In both cases, the status of each issue will indicate whether the user story has been completed.
+
+## Automated Testing
+
+### Testing django views, models and forms
+
+Comprehensive automated testing can be seen for the Menu App where all CRUD functionalities are tested. This has partially been completed for the Booking App where the models are comprehensively tested but the forms/views are only partially tested as a related bug was being addressed.
+
+Testing of the Booking Form raised an issue regarding the form validation preventing a user to submit a booking within two days of now. This issue has been mitigated through a django date widget which has been rendered to not allow selection of the invalid dates.
+
+---
+
+[Return to top](#cedar--flame)
+
+# Bugs
+
+This section provides an overview of the bugs encountered during development, along with their resolutions. Any remaining issues or notable fixes are also tracked for reference.
+
+Several bugs encountered during development and their solutions are documented in the GitHub issues tracker. Some notable examples include:
+- [BUG - Form not submitting without modifying image field](https://github.com/MFS4711/Restaurant-Web-App/issues/45)
+- [BUG - UX - Image preview only showing when original image is placeholder](https://github.com/MFS4711/Restaurant-Web-App/issues/44)
+- [BUG - Validation HTML on Menu Page - Forms have duplicate ID's](https://github.com/MFS4711/Restaurant-Web-App/issues/48)
+- [BUG - Table availability table not showing booking duration as occupied](https://github.com/MFS4711/Restaurant-Web-App/issues/47)
+- [BUG - Table not visible 2 hours + before an existing booking](https://github.com/MFS4711/Restaurant-Web-App/issues/46)
+
+## Remaining Bugs
+### Bug: Staff Booking Form - Table Availability Check Issue
+
+#### Description:
+There is a bug related to the process of amending or cancelling a booking that has an assigned table. The issue arises because the `StaffBookingForm` performs a table availability check during form validation, which requires an available table to be assigned to the booking in order for the form to be submitted. 
+
+When a staff member tries to change the status of a booking (e.g., from `Confirmed` to `Cancelled`, `No Show`, or other statuses), the form expects the table to be available. However, the table should be freed when the status is set to `Cancelled`. This results in a situation where staff cannot update or cancel a booking unless a valid, available table is assigned, which is not the intended behavior for handling status changes.
+
+#### Impact:
+This bug only affects the staff booking form. It prevents staff from updating the booking status (e.g., cancelling or changing the status of a booking) unless a table is assigned, even though the table should be cleared when the status is set to `Cancelled`.
+
+This issue does **not** impact customer bookings, as the related forms do not require a table availability check.
+
+#### Observed Bug:
+- **Issue**: To change the status of a booking (e.g., to cancel a booking or update its status), staff are required to assign an available table to the booking before submitting the form. This prevents staff from properly changing the status to `Cancelled`, `No Show`, etc., because a table needs to be available.
+- **GitHub Issue**: You can track the bug and potential fixes here:  
+  [BUG - Staff Booking Form - Staff need to assign an available table to change the booking status](https://github.com/MFS4711/Restaurant-Web-App/issues/49)
+
+#### Attempts at Fixing:
+- **First Approach**: A potential fix was explored by modifying the `clean_table` method to skip the table availability check when the booking status is `Cancelled` or being updated. Despite multiple attempts, this solution has not been successful in resolving the issue.
+  
+- **Second Approach**: Another potential solution considered is removing the `status` field from the `StaffBookingForm` and controlling the status assignment directly in the view instead. This approach has not been implemented yet, but it will be explored in future iterations.
+
+#### Next Steps:
+- Further investigation is needed to ensure that the table availability check is correctly bypassed when the booking status is set to `Cancelled` (so the table can be freed) or updated.
+- Future fixes will focus on handling the status field more appropriately, possibly removing it from the form or adjusting the validation logic to handle status changes without requiring a table to be assigned.
+
+---
+
+[Return to top](#cedar--flame)
+
+# Libraries and Programs Used
+
+This section highlights the key libraries, tools, and platforms utilised throughout the development of the project. These technologies played an essential role in various aspects of the project, from wireframing and version control to deployment and testing.
+
+1. [Balsamiq](https://balsamiq.com/)
+    - Balsamiq was used to wireframe all the pages in the project.
+2. [Git](https://git-scm.com/)
+    - Version control was implemented using Git through the GitHub terminal.
+3. [Github](https://github.com/)
+    - GitHub was used to store the project after being pushed from Git. The cloud service GitHub Pages was used to deploy the project on the web, while GitHub Projects tracked User Stories, Epics, bugs, and other issues throughout the development.
+4. [Gitpod](https://www.gitpod.io/)
+    - Gitpod was used as the primary IDE for development, with ESLint and Flake8 linters configured for JavaScript and Python code validation, respectively.
+5. [Heroku](https://www.heroku.com/)
+    - Heroku was used for deploying the project.
+6. [pytest](https://docs.pytest.org/en/7.1.x/)
+    - Pytest was used for automated testing of the project.
+7. [Canva](https://www.canva.com/ai-logo-generator/)
+    - Canva was used to generate the logo for this project
+8. [Photoroom](https://www.photoroom.com/tools/transparent-background)
+    - Photoroom was used to transfomr images to have a transparent background
+9. [ChatGPT](https://chatgpt.com/)
+    - ChatGPT was the primary AI tool used to aid development through a variety of areas such as bug-fixing, tests devlopment, introduction to form and model methods, improving accessibility and code maintainability as well as initial planning such as outlining scope and developing Epics and Stories.
+10. [Pexels](https://www.pexels.com/)
+    - Pexels was used as the primary source of background images used in the project.
+
+---
+
+[Return to top](#cedar--flame)
+
+# Deployment
+
+This section outlines the steps required to deploy your project to Heroku, ensuring that all configurations and settings are properly set for both development and production environments. Before proceeding with deployment, you will clone the repository to your local machine to safely develop without modifying the original codebase. Follow these steps to set up the app locally, deploy it to Heroku, and configure essential services such as the database, social logins, and payment processing. By the end of this guide, your app will be live and accessible on the web.
+
+## Deploying to Heroku
+1. **Log into Heroku** and navigate to the Dashboard.
+2. Click the **'New'** button.
+3. Choose a **unique app name** and select the region relevant to you.
+4. **Create a Database** - As a student at Code Institute, I used [CI Database Maker](https://dbs.ci-dbs.net/) but this can also be achieved on Heroku by paying a monthly fee and following the below steps:
+    - Head to the Resources tab.
+    - Click on Find more add-ons.
+    - Search for Heroku Postgres and select it, then click Install Heroku Postgres.
+    - Pick a plan, then choose your app.
+    - Go back to the Resources tab, click on the Heroku Postgres icon, and open the Settings tab. Click Database Credentials and copy the URL to your clipboard.
+    - Paste this URL into your env.py file under the key DATABASE_URL. This ensures you’re using the same database for both development and production environments.
+
+5. Go to the **Settings** tab, and click **Reveal Config Vars**. Add the following config variables, if not already present:
+    - **Django secret key**
+    - **Database URL**
+    - **Cloudinary API**
+
+6. In your **local repository**, add a **Procfile** to the root directory with this content:
+
+    `web: gunicorn cedar_and_flame.wsgi`
+
+7. Add your Heroku app URL to the `ALLOWED_HOSTS` list in `settings.py`.
+
+8. Set `DEBUG` to `False` in `settings.py`, then commit and push your changes to GitHub.
+9. Navigate to the **Deploy** tab in the Dashboard. Under **Deployment Method**, click the **GitHub** icon to connect your Heroku app to your GitHub repository.
+    - Enter your repository name, click **Search**, then click **Connect**.
+10. Under the **Manual Deploy** section, click **Deploy Branch**. Once deployed, you should see the message **"Your app was successfully deployed"**.
+11. Click **Open App** to open the app in the browser.
+
+## Making a Local Clone
+1. Open a terminal/command prompt on your local machine.
+2. Navigate to the directory where you want to clone the project.
+3. Run the following command to clone the repository :
+
+    `git clone 'REPO_LINK'`
+
+## Running in Local Environment
+1. Create a virtual environment in the newly cloned project folder using:
+    ```bash
+    python3 -m venv venv
+    ```
+2. Activate the virtual environment:
+    ```bash
+    source venv/bin/activate
+    ```
+3. Install the project dependencies:
+    ```bash
+    pip3 install -r requirements.txt
+    ```
+4. Create an `env.py` file with the following environment variables:
+    - `BASE_URL`: The root URL for the local dev project (usually `http://localhost:8000/`).
+    - `DATABASE_URL`: The URL generated by Heroku (see the deployment section).
+    - `CLOUDINARY_URL`: The URL provided by Cloudinary for storing media files. You can obtain this by signing up on [Cloudinary](https://cloudinary.com/) and generating your API credentials.
+    - `DEBUG`: Set this to `True` for local development.
+    - `PORT`: Default Django port, typically 8000.
+    - `SECRET_KEY`: The Django secret key.
+
+---
+
+[Return to top](#title)
+
+# Credits
+
+<!-- List Credit - Sources of images, research or code attributions -->
+
+- []()
+
+
+# Acknowledgements
+
+<!-- Acknowledgements paragraph -->
+
+---
+
+[Return to top](#title)
