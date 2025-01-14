@@ -429,6 +429,10 @@ The User Epics and their related User Stories are as follows:
     - Story : [Customise Task Table](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/23)
 - Epic : [Notifications and Reminders](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/26)
     - Story : [Notification of due date](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/31)
+- Epic : [Task Gamification and Motivation](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/27)
+    - Story : [Points System](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/24)
+    - Story : [Task Streak Tracker](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/25)
+    - Story : [Timer for Task Focus](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/28)
 
 ## Data Model
 This section provides an overview of the data models used in the project, represented through Entity-Relationship Diagrams (ERDs) for each application. Each sub-heading corresponds to a specific app, detailing its database schema and the relationships between key entities. These ERDs were drawn using [Lucidchart](https://www.lucidchart.com/pages/) and offer a clear visualization of how data is structured and flows within the application.
