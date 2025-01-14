@@ -524,102 +524,6 @@ The manual testing of features is organised by app below. Testing was carried ou
 |Page|Feature|Action|Effect|
 |---|---|---|---|
 |/customer-dashboard/<int:user_id>/|Unauthorised user - attempt to access a customer dashboard|Search customer-dashboard/n (n is any integer)|User is redirected to the homepage with an error message advising unauthorised access|
-|/customer-dashboard/<int:user_id>/|Authorised customer - unable to access another customer's dashboard|Search customer-dashboard/n (n is any integer - not this user's id)|Error message advising unauthorised access appears|
-|/customer-dashboard/<int:user_id>/|Authorised customer - access to personal dashboard|Login as customer and click customer dashboard nav-link|Access personal customer dashboard|
-|/customer-dashboard/<int:user_id>/|View Upcoming/Past Bookings|Make a booking and return to dashboard|View Upcoming/Past Bookings in table sections|
-|/customer-dashboard/<int:user_id>/|If no bookings - message appears|No Bookings exist|Message appears advising no bookings exist|
-|/customer-dashboard/<int:user_id>/|Edit an upcoming booking|Click Edit button next to a booking|Redirects to /edit-booking/<int:booking_id>/|
-|/customer-dashboard/<int:user_id>/|Delete an upcoming booking|Click Delete button next to a booking|Open a delete modal requiring delete confirmation|
-|/customer-dashboard/<int:user_id>/|Customer confirmation required section - hidden|No Bookings exist in this status|Section is not visible|
-|/customer-dashboard/<int:user_id>/|View bookings requiring customer approval|Booking requiring Customer Action exists|Django message displayed in dashboard to indicate user action required|
-|/customer-dashboard/<int:user_id>/|Book a table|Click button to book a table|Redirects to booking page|
-|/customer-dashboard/<int:user_id>/|View Menu|Click button to view|Redirects to menu page|
-|/staff-dashboard/|Unauthorised user|Access page via URL|Redirects to homepage with message advising unauthorised access|
-|/staff-dashboard/|Authenticated Staff - View Overview of today|Click Staff Dashboard in Navbar|View Bookings for today in a table and dynamic table availability for today|
-|/staff-dashboard/|Authenticated Staff - No bookings today|Access staff dashboard on a day with no bookings|Table shows advising no bookings today|
-|/staff-dashboard/|Authenticated Staff - Navigate to Manage all bookings page|Click 'Manage Bookings' button|Redirects to manage bookings page|
-|/staff-dashboard/|Authenticated Staff - Edit a booking|Click Edit button|Redirects to edit booking page|
-|/staff-dashboard/|Authenticated Staff - Delete a booking|Click Delete button|Delete modal appears requiring confirmation of deletion|
-|/admin-dashboard/|Unauthorised user|Access page via URL|Redirects to homepage with message advising unauthorised access|
-|/admin-dashboard/|Authenticated Admin - View Analytics|Access page via navbar|View bootstrap cards with overall analytical information|
-|/admin-dashboard/|Authenticated Admin - View Analytics by filter|Click relevant filter from dropdown and apply|Displays card for defined time period as well as a table of all bookings in that time period|
-|/admin-dashboard/|Authenticated Admin - Navigate to Manage all bookings page|Click 'Manage Bookings' button|Redirects to manage bookings page|
-|/admin-dashboard/|Authenticated Admin - Navigate to Menu page|Click 'Manage Menu' button|Redirects to menu page|
-|||||
-</details>
-
-<details>
-<summary>Menu App</summary>
-
-|Page|Feature|Action|Effect|
-|---|---|---|---|
-|/menu/|All Users - view menu item in more detail|Click Menu Item Header|Menu Item Modal appears|
-|/menu/|Admin can edit a menu item|Click edit button next to menu item|Redirects to edit menu page|
-|/menu/|Admin can create a menu item|Click create button in relevant category|Redirects to create menu item page|
-|/menu/|Admin can delete a menu item|Click delete button next to menu item|Opens a delete modal requiring delete confirmation|
-|/menu/create-menu-item/<str:category_label>/|Unauthorised user|Access page via URL|Redirects to homepage with message advising unauthorised access|
-|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - View form to create a menu item in the associated category|Click edit on any menu item in menu page|Form appears with name, description, image, price, and availability fields|
-|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Submit valid data|Fill name, description, and set positive price value - click submit|Form submits and redirects to menu page with Django message; menu item appears in associated category|
-|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Submit placeholder image|Leave image field empty and submit form|Default placeholder image is applied to menu item|
-|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Submit new image|Add image file|Image is shown when accessing menu item modal on the menu page|
-|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Cannot submit negative numbers|Add negative price|Form does not submit, and validation error is shown|
-|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Cannot submit numbers with more than 2 decimal places|Add number to 3 decimal places or more|Form does not submit, and validation error is shown|
-|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Submit price without defining decimal value|Add Integer/float to 1 decimal place in price field|Form submits and automatically rounds to 2 decimal places|
-|/menu/create-menu-item/<str:category_label>/|Authenticated Admin - Cancel creation of menu item|Click cancel button|Redirects to the menu page|
-|/menu/edit-menu-item/<int:menu_item_id>/|Unauthorised user|Access page via URL|Redirects to homepage with message advising unauthorised access|
-|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - View form to edit a menu item in the associated category|Click edit on any menu item in menu page|Form appears with name, description, image, price, availability fields, and current image preview prepopulated with existing data|
-|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - Leave image unchanged|Leave image field empty and submit form|Existing image is applied|
-|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - Cannot submit negative numbers|Add negative price|Form does not submit, and validation error is shown|
-|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - Cannot submit numbers with more than 2 decimal places|Add number to 3 decimal places or more|Form does not submit, and validation error is shown|
-|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - Submit price without defining decimal value|Add Integer/float to 1 decimal place in price field|Form submits and automatically rounds to 2 decimal places|
-|/menu/edit-menu-item/<int:menu_item_id>/|Authenticated Admin - Cancel creation of menu item|Click cancel button|Redirects to the menu page|
-|||||
-</details>
-
-<details>
-<summary>Booking App</summary>
-
-|Page|Feature|Action|Effect|
-|---|---|---|---|
-|/book-table/|Unauthenticated users - login required prompt|Access Book A Table page without logging in|See prompt to login/register to book a table|
-|/book-table/|Unauthenticated users - login required prompt|Click login|Redirects to login page|
-|/book-table/|Unauthenticated users - login required prompt|Click register|Redirects to register page|
-|/book-table/|Authenticated users - Booking Form appears|Access Book A Table page|Displays booking form|
-|/book-table/|Authenticated users - Select Date|Click Date Widget|Calendar appears|
-|/book-table/|Authenticated users - Select Invalid Date|Click Date Widget|Invalid dates are not selectable|
-|/book-table/|Authenticated users - Select Valid Time|Click Time Widget|Dropdown of times matching opening hours appears|
-|/book-table/|Authenticated users - Select Invalid Time|Type a time outside opening hours|Validation error message appears|
-|/book-table/|Authenticated users - Select Valid Number of People|Click Incrementer/type number|Number increments|
-|/book-table/|Authenticated users - Select Valid Number of People|Click Incrementer down|Number min is 1|
-|/book-table/|Authenticated users - Select Valid Number of People|Click Incrementer up repetitively|Number max is 12|
-|/book-table/|Authenticated users - Select invalid Number of People|Type number not between 1 and 12|Form alerts to invalid number and advises limits|
-|/book-table/|Authenticated users - Additional Notes|Add/don't add notes|No impact|
-|/book-table/|Authenticated users - Submit Valid Booking|Fill form fields validly and click submit|Redirected to booking success page|
-|/book-table/|Authenticated users - Submit Invalid Booking|Fill form fields invalidly and click submit|Booking does not submit - form fields with invalid data will be highlighted|
-|/booking-success/<int:booking_id>/|Authenticated users booking|Submit a valid booking|View booking overview and navigation buttons for dashboard or menu|
-|/booking-success/<int:booking_id>/|Authenticated users booking - Navigate to Dashboard|Click "Your Dashboard" button|Redirects to customer-specific dashboard or staff/admin dashboard depending on role|
-|/booking-success/<int:booking_id>/|Authenticated users booking - Navigate to Menu|Click "Menu" button|Redirects to menu page|
-|/edit-booking/<int:booking_id>/|Authenticated users booking - Redefine booking details for an upcoming booking|Click Edit Button for upcoming booking in customer dashboard|View existing booking details and booking form below|
-|/edit-booking/<int:booking_id>/|Authenticated users booking - Redefine booking details for an upcoming booking - valid|Edit any form details and submit|Redirects to customer dashboard and displays message updated booking status|
-|/edit-booking/<int:booking_id>/|Authenticated users booking - Redefine booking details for an upcoming booking - valid - previously confirmed status|Edit any form details and submit|Redirects to customer dashboard and displays message updated booking status - booking status changed to pending|
-|/edit-booking/<int:booking_id>/|Authenticated users booking - customer confirmation required booking|Click Edit button in relevant table in customer dashboard|View booking details and a form with only status field and submit button|
-|/edit-booking/<int:booking_id>/|Authenticated users booking - customer confirmation required booking|Click confirmed status and submit|Redirected to customer dashboard and booking now shows in upcoming bookings as confirmed|
-|/edit-booking/<int:booking_id>/|Authenticated users booking - customer confirmation required booking|Click cancelled status and submit|Redirected to customer dashboard and booking no longer visible in upcoming bookings|
-|/edit-booking/<int:booking_id>/|Unauthenticated users booking|Attempt to access via URL|Redirects to homepage with message advising unauthorised access|
-|/manage-booking/<int:booking_id>/|Unauthenticated users|Attempt to access via URL|Redirects to homepage with message advising unauthorised access|
-|/manage-booking/<int:booking_id>/|Authenticated users but not staff|Attempt to access via URL|Redirects to homepage with message advising unauthorised access|
-|/manage-booking/<int:booking_id>/|Authenticated Staff|Click button in staff dashboard/navigate via navbar|Displays bookings of all statuses in relevant tables - scrollable|
-|/manage-booking/<int:booking_id>/|Authenticated Staff can edit a booking|Click edit button|Redirects to edit booking page|
-|/manage-booking/<int:booking_id>/|Authenticated Staff can delete a booking|Click delete button|Opens a delete modal requiring confirmation of delete|
-|/edit-booking/<int:booking_id>/|Authenticated Staff|Click edit button in manage bookings page|View particular booking details, table availability on the day, and the update booking form|
-|/edit-booking/<int:booking_id>/|Authenticated Staff - amend booking time|Click time widget|View times associated with opening hours|
-|/edit-booking/<int:booking_id>/|Authenticated Staff - can assign table|Click dropdown of table field|View tables filtered to meet capacity size of booking|
-|/edit-booking/<int:booking_id>/|Authenticated Staff - cannot assign occupied table - prevent double booking|Select an occupied table and submit booking|Validation error and error message indicating table is occupied will appear|
-|/edit-booking/<int:booking_id>/|Authenticated Staff - can see table availability in a table|Look at Table availability table|Green cells advise available and red is occupied for a particular time - staff can amend time as required|
-|/edit-booking/<int:booking_id>/|Authenticated Staff - change booking status|Click status form field|Can select 'confirmed' (preselected), 'cancelled', 'completed', or 'customer confirmation required'|
-|/edit-booking/<int:booking_id>/|Authenticated Staff - cancel a change to a booking|Click cancel button|Redirected to manage bookings page|
-|/edit-booking/<int:booking_id>/|Authenticated users booking - cancel a change to a booking|Click cancel button|Redirected to customer dashboard page|
-|/manage-booking/<int:booking_id>/|Bookings marked as confirmed - if time passes - marked as no show automatically if status not directly changed|Allow a confirmed booking time to pass|Booking status is automatically changed to no show|
 |||||
 </details>
 
@@ -637,13 +541,9 @@ The results are displayed by page below:
 
 ![index_lighthouse](readme_images/lighthouse/index_lighthouse.png)
 
-- Menu Page
+- ... Page
 
 ![menu_lighthouse](readme_images/lighthouse/menu_lighthouse.png)
-
-- Booking Page
-
-![booking_lighthouse](readme_images/lighthouse/booking_lighthouse.png)
 
 - Contact Page
 
@@ -678,14 +578,7 @@ All python code is validated by the [Flake8 linter](https://flake8.pycqa.org/en/
 
 </details>
 
-<details>
-<summary>Dashboard App</summary>
-
-- views.py
-
-![Python Validation](/readme_images/python_validation/dashboard-python_validation.png)
-
-</details>
+<!-- In style below -->
 
 <details>
 <summary>Booking App</summary>
@@ -718,52 +611,19 @@ Validation of test_forms.py and test_views.py to be completed once the reference
 
 </details>
 
-<details>
-<summary>Menu App</summary>
-
-- models.py
-
-![menu_models_python_validation](/readme_images/python_validation/menu_models_python_validation.png)
-
-- forms.py
-
-![menu_forms_python_validation](/readme_images/python_validation/menu_forms_python_validation.png)
-
-- views.py
-
-![menu_views_python_validation](/readme_images/python_validation/menu_views_python_validation.png)
-
-- admin.py
-
-![menu_admin_python_validation](/readme_images/python_validation/menu_admin_python_validation.png)
-
-- test_models.py
-
-![menu_test_models_python_validation](/readme_images/python_validation/menu_test_models_python_validation.png)
-
-- test_forms.py
-
-![menu_test_forms_python_validation](/readme_images/python_validation/menu_test_forms_python_validation.png)
-
-- test_views.py
-
-![menu_test_views_python_validation](/readme_images/python_validation/menu_test_views_python_validation.png)
-
-</details>
-
 ### JavaScript Validation
 
 All JavaScript code is validated by the [ESLint](https://eslint.org/) (installed in VSCode) and [JS Hinterface](https://mfs4711.github.io/jshint-api/). Custom JS was present only in the Booking and Menu Apps respectively.
 
 <details>
-<summary>Booking App</summary>
+<summary>... App</summary>
 
 ![booking_js-validation](/readme_images/js_validation/booking_js-validation.png)
 
 </details>
 
 <details>
-<summary>Menu App</summary>
+<summary>... App</summary>
 
 ![menu_js-validation](/readme_images/js_validation/menu_js-validation.png)
 
@@ -774,14 +634,14 @@ All JavaScript code is validated by the [ESLint](https://eslint.org/) (installed
 All HTML was validating using the page source of the deployed project using [W3C Markup Validation Service](https://validator.w3.org/). All pages were clear of all errors/warnings. There was only one page where an additonal factor was noted. This was on the menu page which had an 'info' warning. This was related to the way the Cloudinary image is used in the menu item modal.
 
 <details>
-<summary>Menu Page</summary>
+<summary>... Page</summary>
 
 ![menu.html_html_validation](/readme_images/html%20validation/menu.html_html_validation.png)
 
 </details>
 
 <details>
-<summary>All Other Pages</summary>
+<summary>... Other Pages</summary>
 
 ![all-other-pages_html_validation](/readme_images/html%20validation/all-other-pages_html_validation.png)
 
@@ -801,9 +661,9 @@ The single CSS file was validated using the [W3C Validation Service](https://jig
 ## User Story Testing
 The User Epics and Stories for this project are documented across 3 GitHub Projects, each corresponding to a specific iteration of the development work. However, as already mentioned only Iteration 1 has been addressed thus far with the remaining Iterations noted as part of future implementation. You can find the relevant Iterations here:
 
-- [Iteration 1](https://github.com/users/MFS4711/projects/5)
-- [Iteration 2](https://github.com/MFS4711/Restaurant-Web-App/milestone/2)
-- [Iteration 3](https://github.com/MFS4711/Restaurant-Web-App/milestone/3)
+- [Iteration 1]()
+- [Iteration 2]()
+- [Iteration 3]()
 
 Alternatively, the Epics and Stories are individually linked here :
 
@@ -815,26 +675,28 @@ In both cases, the status of each issue will indicate whether the user story has
 
 ### Testing django views, models and forms
 
+<!-- Description in style below -->
+
 Comprehensive automated testing can be seen for the Menu App where all CRUD functionalities are tested. This has partially been completed for the Booking App where the models are comprehensively tested but the forms/views are only partially tested as a related bug was being addressed.
 
 Testing of the Booking Form raised an issue regarding the form validation preventing a user to submit a booking within two days of now. This issue has been mitigated through a django date widget which has been rendered to not allow selection of the invalid dates.
 
 ---
 
-[Return to top](#cedar--flame)
+[Return to top](#title)
 
 # Bugs
 
 This section provides an overview of the bugs encountered during development, along with their resolutions. Any remaining issues or notable fixes are also tracked for reference.
 
 Several bugs encountered during development and their solutions are documented in the GitHub issues tracker. Some notable examples include:
-- [BUG - Form not submitting without modifying image field](https://github.com/MFS4711/Restaurant-Web-App/issues/45)
-- [BUG - UX - Image preview only showing when original image is placeholder](https://github.com/MFS4711/Restaurant-Web-App/issues/44)
-- [BUG - Validation HTML on Menu Page - Forms have duplicate ID's](https://github.com/MFS4711/Restaurant-Web-App/issues/48)
-- [BUG - Table availability table not showing booking duration as occupied](https://github.com/MFS4711/Restaurant-Web-App/issues/47)
-- [BUG - Table not visible 2 hours + before an existing booking](https://github.com/MFS4711/Restaurant-Web-App/issues/46)
+<!-- Add issues in Github and link in list below - Add comments of fixes in Issue -->
+- [BUG - ]()
 
 ## Remaining Bugs
+
+<!-- Any remaining bugs in structure below -->
+
 ### Bug: Staff Booking Form - Table Availability Check Issue
 
 #### Description:
@@ -863,7 +725,7 @@ This issue does **not** impact customer bookings, as the related forms do not re
 
 ---
 
-[Return to top](#cedar--flame)
+[Return to top](#title)
 
 # Libraries and Programs Used
 
@@ -892,7 +754,7 @@ This section highlights the key libraries, tools, and platforms utilised through
 
 ---
 
-[Return to top](#cedar--flame)
+[Return to top](#title)
 
 # Deployment
 
@@ -917,7 +779,7 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 
 6. In your **local repository**, add a **Procfile** to the root directory with this content:
 
-    `web: gunicorn cedar_and_flame.wsgi`
+    `web: gunicorn title.wsgi`
 
 7. Add your Heroku app URL to the `ALLOWED_HOSTS` list in `settings.py`.
 
