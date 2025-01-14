@@ -396,16 +396,39 @@ MoSCoW prioritisation was applied using the labels must-have, should-have, and c
 The project was broken down into manageable sprints using GitHub Projects, which provided a Kanban board. Issues were posted to the board and moved from "Todo" to "In Progress" to "Done" as they were completed. Due to time constraints, only Iteration 1 was completed, though future iterations were planned. This initial planning outlines the anticipated development of the application.
 
 The iterations are documented here :
-  - [MVP]()
-  - [Iteration 2]()
-  - [Iteration 3]()
+  - [MVP](https://github.com/users/MFS4711/projects/7/views/1)
+  - [Iteration 2](https://github.com/MFS4711/Hackathon-2-Task_Manager/milestone/2)
+  - [Iteration 3](https://github.com/MFS4711/Hackathon-2-Task_Manager/milestone/3)
 
 The User Epics and their related User Stories are as follows:
 <!-- Add stories and epics from github -->
-- Epic : []()
-    - Story : []()
-    - Story : []()
-    - Story : []()
+- Epic : [User Authentication](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/1)
+    - Story : [User Registration](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/2)
+    - Story : [User Login](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/3)
+    - Story : [User Logout](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/4)
+    - Story : [Password reset](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/5)
+- Epic : [Task Management](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/6)
+    - Story : [Create a Task](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/7)
+    - Story : [View task list](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/8)
+    - Story : [Update a Task](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/9)
+    - Story : [Delete a Task](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/10)
+    - Story : [Mark Task as completed](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/11)
+- Epic : [Task Filtering and Sorting](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/12)
+    - Story : [Sort Tasks by Due Date](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/13)
+    - Story : [Overdue Tasks](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/14)
+    - Story : [Add Task Categories](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/15)
+    - Story : [Filter Tasks by Category](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/16)
+    - Story : [Sort Tasks by priority](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/29)
+    - Story : [Search Tasks by Keywords](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/30)
+- Epic : [Task Display and Interface](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/17)
+    - Story : [Display Tasks in a Table](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/18)
+    - Story : [7-Day Calendar View](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/19)
+    - Story : [Task Due Date Indicator](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/20)
+- Epic : [User Experience and Visual Features](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/21)
+    - Story : [Task Progress Tracker](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/22)
+    - Story : [Customise Task Table](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/23)
+- Epic : [Notifications and Reminders](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/26)
+    - Story : [Notification of due date](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/31)
 
 ## Data Model
 This section provides an overview of the data models used in the project, represented through Entity-Relationship Diagrams (ERDs) for each application. Each sub-heading corresponds to a specific app, detailing its database schema and the relationships between key entities. These ERDs were drawn using [Lucidchart](https://www.lucidchart.com/pages/) and offer a clear visualization of how data is structured and flows within the application.
