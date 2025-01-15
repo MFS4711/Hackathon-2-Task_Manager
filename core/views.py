@@ -1,9 +1,33 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+# Create your views here.
 
 
-class HomePage(TemplateView):
+def homepage(request):
     """
-    Displays home page"
+    Display the homepage.
+
+    **Context:**
+
+    None
+
+    **Template:**
+
+    :template:`core/index.html`
     """
-    template_name = 'base.html'
+
+    return render(request, "core/index.html")
+
+
+def contact(request):
+    """
+    Display the contact page.
+
+    **Context:**
+
+    None
+
+    **Template:**
+
+    :template:`core/contact.html`
+    """
+    return render(request, "core/contact.html")
