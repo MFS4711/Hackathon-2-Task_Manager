@@ -4,6 +4,10 @@
 {% url 'task_dashboard' as task_dashboard_url %}
 {% url 'contact' as contact_url %}
 
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!doctype html>
 
 <html lang="en">
@@ -56,6 +60,22 @@
                             <a class="nav-link {% if request.path == contact_url %}active"
                                 aria-current="page{% endif %}" href="{% url 'contact' %}">Contact</a>
                         </li>
+                        <!-- Login/out -->
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}"
+                                href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}"
+                                href="{% url 'account_login' %}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}"
+                                href="{% url 'account_signup' %}">Sign Up</a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
             </nav>
