@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+from .forms import TaskForm, EditTaskForm
 from .models import Task
 from django.urls import reverse_lazy, reverse
 # Create your views here.
@@ -22,12 +23,13 @@ def task_dashboard(request):
 
 class AddTaskView(CreateView):
     model = Task
-    template_name='add-task.html'
+    form_class = TaskForm
+    template_name ='task_management/add_task.html'
     success_url = reverse_lazy('home')
     
 class UpdateTaskView(UpdateView):
     model = Task
-    form_class = EditForm
+    form_class = EditTaskForm
     template_name = 'update-task.html'
     success_url = reverse_lazy('home')
 

@@ -32,10 +32,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-mfs4711-hackathon2taskm-fv7z98kajyn.ws.codeinstitute-ide.net', '.gitpod.io', '.herokuapp.com']
+    '8000-mfs4711-hackathon2taskm-fv7z98kajyn.ws.codeinstitute-ide.net', '8000-mfs4711-hackathon2taskm-80wuhzuon6x.ws-eu117.gitpod.io', '.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
+    'https://*.codeinstitute-ide.net', 'https://*.herokuapp.com', 'https://8000-mfs4711-hackathon2taskm-80wuhzuon6x.ws-eu117.gitpod.io']
 
 
 # Application definition
