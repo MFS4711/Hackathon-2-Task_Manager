@@ -269,24 +269,21 @@ These wireframes illustrate how each page is designed to adapt across various sc
 <details>
 <summary>Mobile</summary>
 
-![homepage-mobile wireframe]
-<img src="readme_images/wireframes/homepage-mobile.png"
+![homepage-mobile wireframe](readme_images/wireframes/homepage-mobile.png)
 
 </details>
 
 <details>
 <summary>Tablet</summary>
 
-![homepage-tablet wireframe]
-<img src= "readme_images/wireframes/homepage-tablet.png">
+![homepage-tablet wireframe](readme_images/wireframes/homepage-tablet.png)
 
 </details>
 
 <details>
 <summary>Desktop</summary>
 
-![homepage-desktop wireframe]
-<img src="readme_images/wireframes/homepage-desktop.png">
+![homepage-desktop wireframe](readme_images/wireframes/homepage-desktop.png)
 
 </details>
 
@@ -295,24 +292,21 @@ These wireframes illustrate how each page is designed to adapt across various sc
 <details>
 <summary>Mobile</summary>
 
-![dashboard-mobile wireframe]
-<img src="readme_images/wireframes/dashboard-mobile.png">
+![dashboard-mobile wireframe](readme_images/wireframes/dashboard-mobile.png)
 
 </details>
 
 <details>
 <summary>Tablet</summary>
 
-![dashboard-tablet wireframe]
-<img src="readme_images/wireframes/dashboard-tablet.png">
+![dashboard-tablet wireframe](readme_images/wireframes/dashboard-tablet.png)
 
 </details>
 
 <details>
 <summary>Desktop</summary>
 
-![dashboard-desktop wireframe]
-<img src="readme_images/wireframes/dashboard-desktop.png">
+![dashboard-desktop wireframe](readme_images/wireframes/dashboard-desktop.png)
 
 
 </details>
