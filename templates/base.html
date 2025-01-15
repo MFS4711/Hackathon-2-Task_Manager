@@ -1,6 +1,7 @@
 {% load static %}
 
 {% url 'home' as home_url %}
+{% url 'task_dashboard' as task_dashboard_url %}
 {% url 'contact' as contact_url %}
 
 <!doctype html>
@@ -43,6 +44,11 @@
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == home_url %}active" aria-current="page{% endif %}"
                                 href="{% url 'home' %}">Home</a>
+                        </li>
+                        <!-- User Dashboard -->
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == task_dashboard_url %}active"
+                                aria-current="page{% endif %}" href="{% url 'task_dashboard' %}">Task Dashboard</a>
                         </li>
 
                         <!-- Links available to all users -->
