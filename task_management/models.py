@@ -1,7 +1,7 @@
+from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils import timezone
-from django.core.exceptions import ValidationError
-from django.contrib.auth.models import User
 
 
 class Task(models.Model):
@@ -68,18 +68,25 @@ class Task(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the save method to automatically set the status to 'Overdue' if the
-        task is still 'To Do' or 'In Progress' and the due date has passed.
+        Override the save method to automatically set the status to
+        'Overdue' if the task is still 'To Do' or 'In Progress' and
+        the due date has passed.
         """
-        if self.due_date < timezone.now().date() and self.status in [self.TO_DO, self.IN_PROGRESS]:
+        current_date = timezone.now().date()
+        is_due = self.due_date < current_date
+        is_status_pending = self.status in [self.TO_DO, self.IN_PROGRESS]
+
+        if is_due and is_status_pending:
             self.status = self.OVERDUE
+
         super().save(*args, **kwargs)
 
     def clean(self):
         """
         Custom validation to check:
         1. Due date is not in the past.
-        2. Task can only be marked 'Completed' if it was previously 'In Progress'.
+        2. Task can only be marked 'Completed' if it was previously
+        'In Progress'.
         """
         # Ensure due date is not in the past
         if self.due_date < timezone.now().date():
@@ -88,9 +95,10 @@ class Task(models.Model):
         # Ensure that 'OVERDUE' cannot be assigned manually
         if self.status == self.OVERDUE:
             raise ValidationError(
-                "The status 'Overdue' is automatically set by the system and cannot be assigned manually.")
+                "The status 'Overdue' is automatically set by the system and \
+                cannot be assigned manually.")
 
-        # Only allow status change to 'Completed' if the previous status was 'In Progress'
+        # Only allow status change to 'Completed' if previous was 'In Progress'
         if self.status == self.COMPLETED:
             if not self.pk:  # This is a new task
                 raise ValidationError(
@@ -101,10 +109,13 @@ class Task(models.Model):
                 pk=self.pk).status  # Fetch the previous status
             if previous_status != self.IN_PROGRESS:
                 raise ValidationError(
-                    "A task can only be marked as 'Completed' after being 'In Progress'.")
+                    "A task can only be marked as 'Completed' \
+                    after being 'In Progress'.")
 
-        # Ensure that a task marked as 'Completed' cannot be changed back to 'In Progress'
+        # Ensure a 'Completed' task cannot be changed back to 'In Progress'
         if self.status == self.IN_PROGRESS:
-            if self.pk and Task.objects.get(pk=self.pk).status == self.COMPLETED:
+            if self.pk and \
+                    Task.objects.get(pk=self.pk).status == self.COMPLETED:
                 raise ValidationError(
-                    "A task marked as 'Completed' cannot be changed back to 'In Progress'.")
+                    "A task marked as 'Completed' cannot be changed back \
+                    to 'In Progress'.")
