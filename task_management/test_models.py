@@ -310,3 +310,22 @@ class TaskModelTest(TestCase):
         # Expect a ValidationError to be raised due to invalid status transition
         with self.assertRaises(ValidationError):
             task.full_clean()
+
+    def test_task_status_cannot_be_set_to_overdue_manually(self):
+        """
+        Test that a task cannot be manually set to 'Overdue'.
+        The 'Overdue' status must be set by the system based on the due date.
+        """
+        overdue_task = Task.objects.create(
+            user=self.user,
+            title="Overdue Task",
+            description="A task that is overdue",
+            priority=Task.LOW,
+            status=Task.OVERDUE,  # Manually trying to set it to 'Overdue'
+            category=Task.STUDY,
+            due_date=timezone.now().date() - timedelta(days=1)  # Past due date
+        )
+
+        # Expect a ValidationError because the status should not be manually set to 'Overdue'
+        with self.assertRaises(ValidationError):
+            overdue_task.full_clean()

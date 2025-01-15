@@ -85,6 +85,11 @@ class Task(models.Model):
         if self.due_date < timezone.now().date():
             raise ValidationError("Due date cannot be in the past.")
 
+        # Ensure that 'OVERDUE' cannot be assigned manually
+        if self.status == self.OVERDUE:
+            raise ValidationError(
+                "The status 'Overdue' is automatically set by the system and cannot be assigned manually.")
+
         # Only allow status change to 'Completed' if the previous status was 'In Progress'
         if self.status == self.COMPLETED:
             if not self.pk:  # This is a new task
@@ -97,8 +102,9 @@ class Task(models.Model):
             if previous_status != self.IN_PROGRESS:
                 raise ValidationError(
                     "A task can only be marked as 'Completed' after being 'In Progress'.")
-            
+
         # Ensure that a task marked as 'Completed' cannot be changed back to 'In Progress'
         if self.status == self.IN_PROGRESS:
             if self.pk and Task.objects.get(pk=self.pk).status == self.COMPLETED:
-                raise ValidationError("A task marked as 'Completed' cannot be changed back to 'In Progress'.")
+                raise ValidationError(
+                    "A task marked as 'Completed' cannot be changed back to 'In Progress'.")
