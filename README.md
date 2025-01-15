@@ -1,12 +1,12 @@
-# Title
+# FocusFlow
 
 ![Logo Image](/readme_images/logo.png)
 
-A ... Web-App developed using Django
+A Task Management Web-App developed using Django
 
-Source code can be found [here]()
+Source code can be found [here](https://github.com/MFS4711/Hackathon-2-Task_Manager)
 
-The live project can be viewed [here]()
+The live project can be viewed [here](https://focusflow-452b20672adc.herokuapp.com/)
 
 ---
 
@@ -58,15 +58,17 @@ The live project can be viewed [here]()
 
 # Purpose of Project
 
-<!-- Purpose of project - overview paragraph -->
+The Task Management App is designed to simplify task organisation, prioritisation, and progress tracking for individual users. It provides a central platform where users can create, categorise, and monitor their tasks with ease. By offering intuitive features such as priority settings, status tracking, and due date management, the app enhances productivity and streamlines task handling. Its goal is to minimise missed deadlines, improve task visibility, and promote better organisation, ultimately fostering a more focused and efficient workflow.
 
-<!-- Target Audience -->
+The primary users of the Task Management App are individuals looking for an effective way to manage their personal and professional tasks. The app enables users to organise tasks by category, such as Work, Personal, Study, Health, or Other, helping them maintain clarity and focus. Tasks can be prioritised with levels like High, Medium, or Low, while their progress is tracked through statuses such as To Do, In Progress, Completed, and Overdue. Additionally, users can manage deadlines with due dates and automated reminders, ensuring tasks are completed on time, while timestamps provide a clear record of updates.
+
+Built with simplicity and adaptability in mind, the Task Management App empowers individuals to manage their workloads effectively and achieve their goals with ease.
 
 ![responsivenes_screenshot](/readme_images/responsiveness_image.png)
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Features
 
@@ -220,7 +222,7 @@ The following pages are only accessible by admin:
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # User Experience
 
@@ -311,8 +313,8 @@ These wireframes illustrate how each page is designed to adapt across various sc
 
 </details>
 
-
-[Return to top](#title)
+---
+[Return to top](#focusflow)
 
 # Development Process
 
@@ -332,7 +334,6 @@ The iterations are documented here :
   - [Iteration 3](https://github.com/MFS4711/Hackathon-2-Task_Manager/milestone/3)
 
 The User Epics and their related User Stories are as follows:
-<!-- Add stories and epics from github -->
 - Epic : [User Authentication](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/1)
     - Story : [User Registration](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/2)
     - Story : [User Login](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/3)
@@ -434,7 +435,7 @@ This app does not contain any models. It is designed to serve as a container for
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Testing
 
@@ -641,7 +642,7 @@ Testing of the Booking Form raised an issue regarding the form validation preven
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Bugs
 
@@ -683,7 +684,7 @@ This issue does **not** impact customer bookings, as the related forms do not re
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Libraries and Programs Used
 
@@ -712,7 +713,7 @@ This section highlights the key libraries, tools, and platforms utilised through
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Deployment
 
@@ -777,7 +778,7 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Credits
 
@@ -792,4 +793,4 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
