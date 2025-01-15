@@ -1,12 +1,12 @@
-# Title
+# FocusFlow
 
 ![Logo Image](/readme_images/logo.png)
 
-A ... Web-App developed using Django
+A Task Management Web-App developed using Django
 
-Source code can be found [here]()
+Source code can be found [here](https://github.com/MFS4711/Hackathon-2-Task_Manager)
 
-The live project can be viewed [here]()
+The live project can be viewed [here](https://focusflow-452b20672adc.herokuapp.com/)
 
 ---
 
@@ -58,15 +58,17 @@ The live project can be viewed [here]()
 
 # Purpose of Project
 
-<!-- Purpose of project - overview paragraph -->
+The Task Management App is designed to simplify task organisation, prioritisation, and progress tracking for individual users. It provides a central platform where users can create, categorise, and monitor their tasks with ease. By offering intuitive features such as priority settings, status tracking, and due date management, the app enhances productivity and streamlines task handling. Its goal is to minimise missed deadlines, improve task visibility, and promote better organisation, ultimately fostering a more focused and efficient workflow.
 
-<!-- Target Audience -->
+The primary users of the Task Management App are individuals looking for an effective way to manage their personal and professional tasks. The app enables users to organise tasks by category, such as Work, Personal, Study, Health, or Other, helping them maintain clarity and focus. Tasks can be prioritised with levels like High, Medium, or Low, while their progress is tracked through statuses such as To Do, In Progress, Completed, and Overdue. Additionally, users can manage deadlines with due dates and automated reminders, ensuring tasks are completed on time, while timestamps provide a clear record of updates.
+
+Built with simplicity and adaptability in mind, the Task Management App empowers individuals to manage their workloads effectively and achieve their goals with ease.
 
 ![responsivenes_screenshot](/readme_images/responsiveness_image.png)
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Features
 
@@ -220,7 +222,7 @@ The following pages are only accessible by admin:
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # User Experience
 
@@ -269,24 +271,21 @@ These wireframes illustrate how each page is designed to adapt across various sc
 <details>
 <summary>Mobile</summary>
 
-![homepage-mobile wireframe]
-<img src="readme_images/wireframes/homepage-mobile.png"
+![homepage-mobile wireframe](readme_images/wireframes/homepage-mobile.png)
 
 </details>
 
 <details>
 <summary>Tablet</summary>
 
-![homepage-tablet wireframe]
-<img src= "readme_images/wireframes/homepage-tablet.png">
+![homepage-tablet wireframe](readme_images/wireframes/homepage-tablet.png)
 
 </details>
 
 <details>
 <summary>Desktop</summary>
 
-![homepage-desktop wireframe]
-<img src="readme_images/wireframes/homepage-desktop.png">
+![homepage-desktop wireframe](readme_images/wireframes/homepage-desktop.png)
 
 </details>
 
@@ -295,30 +294,27 @@ These wireframes illustrate how each page is designed to adapt across various sc
 <details>
 <summary>Mobile</summary>
 
-![dashboard-mobile wireframe]
-<img src="readme_images/wireframes/dashboard-mobile.png">
+![dashboard-mobile wireframe](readme_images/wireframes/dashboard-mobile.png)
 
 </details>
 
 <details>
 <summary>Tablet</summary>
 
-![dashboard-tablet wireframe]
-<img src="readme_images/wireframes/dashboard-tablet.png">
+![dashboard-tablet wireframe](readme_images/wireframes/dashboard-tablet.png)
 
 </details>
 
 <details>
 <summary>Desktop</summary>
 
-![dashboard-desktop wireframe]
-<img src="readme_images/wireframes/dashboard-desktop.png">
+![dashboard-desktop wireframe](readme_images/wireframes/dashboard-desktop.png)
 
 
 </details>
 
-
-[Return to top](#title)
+---
+[Return to top](#focusflow)
 
 # Development Process
 
@@ -326,7 +322,7 @@ The development process for this project was carefully planned and documented to
 
 ## Project Planning and Documentation Using GitHub
 GitHub Issues were used to document the development steps undertaken in the project. 
-Two issue templates were created: one for [User Epics]() and another for [User Stories]().
+Two issue templates were created: one for [User Epics](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/templates/edit) and another for [User Stories](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/templates/edit).
 A variety of labels were applied to categorise issue types, such as Bugs, User Epics and User Stories, with the parent epic and child story being associated with the same label for easy identificaion.
 MoSCoW prioritisation was applied using the labels must-have, should-have, and could-have.
 
@@ -338,7 +334,6 @@ The iterations are documented here :
   - [Iteration 3](https://github.com/MFS4711/Hackathon-2-Task_Manager/milestone/3)
 
 The User Epics and their related User Stories are as follows:
-<!-- Add stories and epics from github -->
 - Epic : [User Authentication](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/1)
     - Story : [User Registration](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/2)
     - Story : [User Login](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/3)
@@ -440,7 +435,7 @@ This app does not contain any models. It is designed to serve as a container for
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Testing
 
@@ -545,33 +540,41 @@ All python code is validated by the [Flake8 linter](https://flake8.pycqa.org/en/
 <!-- In style below -->
 
 <details>
-<summary>Booking App</summary>
+<summary>Task Management App</summary>
 
 - models.py
 
-![booking_models_python_validation](/readme_images/python_validation/booking_models_python_validation.png)
+![task_management-models.py-python_validation](/readme_images/python_validation/task_management-models.py-python_validation.png)
 
 - forms.py
 
-![booking_forms_python_validation](/readme_images/python_validation/booking_forms_python_validation.png)
+![booking_forms_python_validation](/readme_images/python_validation)
 
 - views.py
 
-![booking_views_python_validation](/readme_images/python_validation/booking_views_python_validation.png)
+![booking_views_python_validation](/readme_images/python_validation)
 
 - admin.py
 
-![booking_admin.py_python_validation](/readme_images/python_validation/booking_admin.py_python_validation.png)
+![booking_admin.py_python_validation](/readme_images/python_validation)
 
 - utils.py
 
-![booking_utils_python_validation](/readme_images/python_validation/booking_utils_python_validation.png)
+![booking_utils_python_validation](/readme_images/python_validation)
 
 - test_models.py
 
-![booking_test_models_python_validation](/readme_images/python_validation/booking_test_models_python_validation.png)
+![task_management-test_models.py-python_validation](/readme_images/python_validation/task_management-test_models.py-python_validation.png)
 
-Validation of test_forms.py and test_views.py to be completed once the referenced bug has been fixed - see [Remaining Bugs](#remaining-bugs)
+- test_forms.py
+
+![task_management-test_models.py-python_validation](/readme_images/python_validation)
+
+- test_views.py
+
+![task_management-test_models.py-python_validation](/readme_images/python_validation)
+
+
 
 </details>
 
@@ -647,7 +650,7 @@ Testing of the Booking Form raised an issue regarding the form validation preven
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Bugs
 
@@ -689,7 +692,7 @@ This issue does **not** impact customer bookings, as the related forms do not re
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Libraries and Programs Used
 
@@ -718,7 +721,7 @@ This section highlights the key libraries, tools, and platforms utilised through
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Deployment
 
@@ -783,7 +786,7 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
 
 # Credits
 
@@ -798,4 +801,4 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 
 ---
 
-[Return to top](#title)
+[Return to top](#focusflow)
