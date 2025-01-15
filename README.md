@@ -292,96 +292,24 @@ These wireframes illustrate how each page is designed to adapt across various sc
 <details>
 <summary>Mobile</summary>
 
-![contact-mobile wireframe](/readme_images/wireframes/contact-mobile.png)
+![dashboard-mobile wireframe](/readme_images/wireframes/dashboard-mobile.png)
 
 </details>
 
 <details>
 <summary>Tablet</summary>
 
-![contact-tablet wireframe](/readme_images/wireframes/contact-tablet.png)
+![dashboard-tablet wireframe](/readme_images/wireframes/dashboard-tablet.png)
 
 </details>
 
 <details>
 <summary>Desktop</summary>
 
-![contact-desktop wireframe](/readme_images/wireframes/contact-desktop.png)
+![dashboard-desktop wireframe](/readme_images/wireframes/dashboard-desktop.png)
 
 </details>
 
-#### _Customer Dashboard_
-
-<details>
-<summary>Mobile</summary>
-
-![welcome_page wireframe](/readme_images/wireframes/customer_dashboard-mobile.png)
-
-</details>
-
-<details>
-<summary>Tablet</summary>
-
-![welcome_page wireframe](/readme_images/wireframes/customer_dashboard-tablet.png)
-
-</details>
-
-<details>
-<summary>Desktop</summary>
-
-![welcome_page wireframe](/readme_images/wireframes/customer_dashboard-desktop.png)
-
-</details>
-
-#### _Staff Dashboard_
-
-<details>
-<summary>Mobile</summary>
-
-![staff_dashboard-mobile wireframe](/readme_images/wireframes/staff_dashboard-mobile.png)
-
-</details>
-
-<details>
-<summary>Tablet</summary>
-
-![staff_dashboard-tablet wireframe](/readme_images/wireframes/staff_dashboard-tablet.png)
-
-</details>
-
-<details>
-<summary>Desktop</summary>
-
-![staff_dashboard-desktop wireframe](/readme_images/wireframes/staff_dashboard-desktop.png)
-
-</details>
-
-#### _Admin Dashboard_
-
-<details>
-<summary>Mobile</summary>
-
-![admin_dashboard-mobile wireframe](/readme_images/wireframes/admin_dashboard-mobile.png)
-
-</details>
-
-<details>
-<summary>Tablet</summary>
-
-![admin_dashboard-tablet wireframe](/readme_images/wireframes/admin_dashboard-tablet.png)
-
-</details>
-
-<details>
-<summary>Desktop</summary>
-
-![admin_dashboard-desktop wireframe](/readme_images/wireframes/admin_dashboard-desktop.png)
-
-</details>
-
----
-
-[Return to top](#title)
 
 # Development Process
 
