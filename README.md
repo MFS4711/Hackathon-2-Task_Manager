@@ -276,14 +276,16 @@ These wireframes illustrate how each page is designed to adapt across various sc
 <details>
 <summary>Tablet</summary>
 
-![homepage-tablet wireframe](/readme_images/wireframes/homepage-tablet.png)
+![homepage-tablet wireframe]
+<img src= "/readme_images/wireframes/homepage-tablet.png)">
 
 </details>
 
 <details>
 <summary>Desktop</summary>
 
-![homepage-desktop wireframe](/readme_images/wireframes/homepage-desktop.png)
+![homepage-desktop wireframe]
+<img src="/readme_images/wireframes/homepage-desktop.png)">
 
 </details>
 
