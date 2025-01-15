@@ -311,6 +311,8 @@ These wireframes illustrate how each page is designed to adapt across various sc
 </details>
 
 
+[Return to top](#title)
+
 # Development Process
 
 The development process for this project was carefully planned and documented to ensure efficient progress and transparency. This section outlines how the project was broken down into manageable tasks, tracked, and prioritized using GitHub Issues and Projects. It also covers the key steps taken, including project planning, SEO, data modeling, and data validation. Each sub-section provides a detailed look at the tools and methods used to guide development from initial planning to implementation.
