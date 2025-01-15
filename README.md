@@ -322,7 +322,7 @@ The development process for this project was carefully planned and documented to
 
 ## Project Planning and Documentation Using GitHub
 GitHub Issues were used to document the development steps undertaken in the project. 
-Two issue templates were created: one for [User Epics]() and another for [User Stories]().
+Two issue templates were created: one for [User Epics](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/templates/edit) and another for [User Stories](https://github.com/MFS4711/Hackathon-2-Task_Manager/issues/templates/edit).
 A variety of labels were applied to categorise issue types, such as Bugs, User Epics and User Stories, with the parent epic and child story being associated with the same label for easy identificaion.
 MoSCoW prioritisation was applied using the labels must-have, should-have, and could-have.
 
@@ -540,33 +540,41 @@ All python code is validated by the [Flake8 linter](https://flake8.pycqa.org/en/
 <!-- In style below -->
 
 <details>
-<summary>Booking App</summary>
+<summary>Task Management App</summary>
 
 - models.py
 
-![booking_models_python_validation](/readme_images/python_validation/booking_models_python_validation.png)
+![task_management-models.py-python_validation](/readme_images/python_validation/task_management-models.py-python_validation.png)
 
 - forms.py
 
-![booking_forms_python_validation](/readme_images/python_validation/booking_forms_python_validation.png)
+![booking_forms_python_validation](/readme_images/python_validation)
 
 - views.py
 
-![booking_views_python_validation](/readme_images/python_validation/booking_views_python_validation.png)
+![booking_views_python_validation](/readme_images/python_validation)
 
 - admin.py
 
-![booking_admin.py_python_validation](/readme_images/python_validation/booking_admin.py_python_validation.png)
+![booking_admin.py_python_validation](/readme_images/python_validation)
 
 - utils.py
 
-![booking_utils_python_validation](/readme_images/python_validation/booking_utils_python_validation.png)
+![booking_utils_python_validation](/readme_images/python_validation)
 
 - test_models.py
 
-![booking_test_models_python_validation](/readme_images/python_validation/booking_test_models_python_validation.png)
+![task_management-test_models.py-python_validation](/readme_images/python_validation/task_management-test_models.py-python_validation.png)
 
-Validation of test_forms.py and test_views.py to be completed once the referenced bug has been fixed - see [Remaining Bugs](#remaining-bugs)
+- test_forms.py
+
+![task_management-test_models.py-python_validation](/readme_images/python_validation)
+
+- test_views.py
+
+![task_management-test_models.py-python_validation](/readme_images/python_validation)
+
+
 
 </details>
 
