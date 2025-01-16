@@ -87,6 +87,7 @@ class Task(models.Model):
         1. Due date is not in the past.
         2. Task can only be marked 'Completed' if it was previously
         'In Progress'.
+        3. Task marked as 'Completed' cannot be reverted back to 'To Do'.
         """
         # Ensure due date is not in the past
         if self.due_date < timezone.now().date():
@@ -119,3 +120,12 @@ class Task(models.Model):
                 raise ValidationError(
                     "A task marked as 'Completed' cannot be changed back \
                     to 'In Progress'.")
+
+        # Ensure a 'Completed' task cannot be changed back to 'To Do'
+        if self.status == self.TO_DO:
+            if self.pk and \
+                    Task.objects.get(pk=self.pk).status == self.COMPLETED:
+                raise ValidationError(
+                    "A task marked as 'Completed' cannot be changed back \
+                        to 'To Do'."
+                )
