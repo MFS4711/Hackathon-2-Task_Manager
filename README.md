@@ -609,9 +609,9 @@ The single CSS file was validated using the [W3C Validation Service](https://jig
 ## User Story Testing
 The User Epics and Stories for this project are documented across 3 GitHub Projects, each corresponding to a specific iteration of the development work. However, as already mentioned only Iteration 1 has been addressed thus far with the remaining Iterations noted as part of future implementation. You can find the relevant Iterations here:
 
-- [Iteration 1]()
-- [Iteration 2]()
-- [Iteration 3]()
+- [Iteration 1](https://github.com/users/MFS4711/projects/7/views/1)
+- [Iteration 2](https://github.com/MFS4711/Hackathon-2-Task_Manager/milestone/2)
+- [Iteration 3](https://github.com/MFS4711/Hackathon-2-Task_Manager/milestone/3)
 
 Alternatively, the Epics and Stories are individually linked here :
 
@@ -773,7 +773,7 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 
 <!-- List Credit - Sources of images, research or code attributions -->
 
-- []()
+- [MFS4711 - Restaurant Web App Readme Template](https://github.com/MFS4711/Restaurant-Web-App)
 
 
 # Acknowledgements
