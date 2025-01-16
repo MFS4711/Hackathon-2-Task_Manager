@@ -232,11 +232,9 @@ This section details the key elements of the user experience (UX) design for the
 
 ### Fonts
 
-<!-- Amend Paragraph in Style Below -->
+The Outfit font was used throughout the project for headings and prominent text. It's a modern, versatile sans-serif font with a clean and professional look, making it ideal for a task manager web app. Its bold, uppercase styling helps convey a sense of clarity and structure, perfect for emphasising key tasks and information.
 
-The Montserrat font was used throughout the project for headings and prominent text. It's a clean, modern sans-serif font with a strong, professional look, making it ideal for a refined restaurant like Cedar and Flame. Its bold, uppercase styling helps convey a sense of sophistication and presence.
-
-For body text, Open Sans was chosen due to its simplicity and high legibility, providing a comfortable reading experience for users. Its versatility and neutral design make it well-suited for longer content while maintaining a polished, cohesive aesthetic across the site.
+For body text, Inter was chosen due to its simplicity and excellent legibility, offering a comfortable reading experience for users. Its balanced and neutral design makes it ideal for long-form content, maintaining a polished, cohesive aesthetic throughout the app.
 
 ### Colour
 The following colour palette was used in the project:
