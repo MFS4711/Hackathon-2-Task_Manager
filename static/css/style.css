@@ -1,7 +1,124 @@
-h1 {
-    color: red;
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+/* ----------------- Global Styles --------------------- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1A3744;
+    color: #F5F7FA;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    color: #42C5F5;
+    text-align: center;
+}
+
+.content-container {
+    min-height: 100vh;
+}
+
+/* -------------------------- Base Styling -------------------------- */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: rgba(8, 20, 36, 1);
+    padding: 0;
+}
+
+.navbar {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    color: #42C5F5;
+}
+
+.navbar-brand img {
+    width: 70px;
+    height: 70px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #F5F5F5;
+    letter-spacing: 0.05rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #42C5F5;
+}
+
+.navbar-nav .nav-link.active {
+    color: #42C5F5;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    background-color: #167EA0;
+    border-radius: 5px;
+}
+
+/* ---- Footer Section ---- */
+
+footer {
+    background-color: #081424;
+    padding: 20px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h5 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+footer p,
+footer ul {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+footer ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+footer.bg-dark img {
+    width: 100%;
+}
+
+footer .social-media a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+footer .social-media a:hover {
+    color: #42C5F5;
+}
 
 /* ------------- sahebachabra  ------------------ */
 

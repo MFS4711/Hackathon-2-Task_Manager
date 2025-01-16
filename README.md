@@ -232,11 +232,9 @@ This section details the key elements of the user experience (UX) design for the
 
 ### Fonts
 
-<!-- Amend Paragraph in Style Below -->
+The Outfit font was used throughout the project for headings and prominent text. It's a modern, versatile sans-serif font with a clean and professional look, making it ideal for a task manager web app. Its bold, uppercase styling helps convey a sense of clarity and structure, perfect for emphasising key tasks and information.
 
-The Montserrat font was used throughout the project for headings and prominent text. It's a clean, modern sans-serif font with a strong, professional look, making it ideal for a refined restaurant like Cedar and Flame. Its bold, uppercase styling helps convey a sense of sophistication and presence.
-
-For body text, Open Sans was chosen due to its simplicity and high legibility, providing a comfortable reading experience for users. Its versatility and neutral design make it well-suited for longer content while maintaining a polished, cohesive aesthetic across the site.
+For body text, Inter was chosen due to its simplicity and excellent legibility, offering a comfortable reading experience for users. Its balanced and neutral design makes it ideal for long-form content, maintaining a polished, cohesive aesthetic throughout the app.
 
 ### Colour
 The following colour palette was used in the project:
@@ -369,61 +367,42 @@ The User Epics and their related User Stories are as follows:
 ## Data Model
 This section provides an overview of the data models used in the project, represented through Entity-Relationship Diagrams (ERDs) for each application. Each sub-heading corresponds to a specific app, detailing its database schema and the relationships between key entities. These ERDs were drawn using [Lucidchart](https://www.lucidchart.com/pages/) and offer a clear visualization of how data is structured and flows within the application.
 
-<!-- Model Description in style below -->
+### Task Management App
 
-### Booking App
-
-![Entity-relationship diagram for Booking App](readme_images/erd/ERD-booking.png)
-
-#### `Table` Table:
-The `Table` table stores information about tables available at the restaurant. Key fields include:
-- `id`: A unique identifier for each table (primary key).
-- `table_number`: The identifier or number of the table.
-- `capacity`: The number of people the table can accommodate.
-- `is_available`: A boolean flag to indicate whether the table is available for booking.
+![Entity-relationship diagram for Task Management App](readme_images/erd/erd_task_management.png)
 
 #### `User` Table:
-The `User` table corresponds to the users in the system (using the Django user model for authentication and permissions). Key fields include:
+The `User` table represents users in the system. It contains key information related to user authentication, account creation, and user details. Key fields include:
 - `id`: A unique identifier for each user (primary key).
 - `username`: The user's chosen username.
 - `email`: The user's email address.
 - `password`: A hashed version of the user's password.
-- `is_staff`: A boolean flag indicating if the user has staff privileges.
 - `is_superuser`: A boolean flag indicating if the user has superuser privileges.
 - `first_name`: The user's first name.
 - `last_name`: The user's last name.
 - `date_joined`: Timestamp for when the user account was created.
 - `last_login`: Timestamp for the user's most recent login.
 
-#### `Booking` Table:
-The `Booking` table records reservations made by users for specific tables at certain times. Key fields include:
-- `id`: A unique identifier for each booking (primary key).
-- `user`: A foreign key linking to the `User` table, indicating who made the booking.
-- `date`: The date of the reservation.
-- `time`: The time of the reservation.
-- `number_of_people`: The number of people included in the booking.
-- `additional_notes`: Any extra details or special requests for the booking.
-- `status`: The status of the booking (e.g., confirmed, pending, canceled), likely represented as an enum or choice field.
-- `table`: A foreign key linking to the `Table` table, indicating which table is reserved.
-- `created_at`: Timestamp for when the booking was created.
-- `updated_at`: Timestamp for when the booking was last updated.
+#### `Task` Table:
+The `Task` table tracks tasks assigned to users in the system. It holds key information related to task details and progress. Key fields include:
+- `id`: A unique identifier for each task (primary key).
+- `user`: A foreign key linking to the `User` table, indicating which user the task is assigned to.
+- `title`: The title of the task.
+- `description`: A detailed description of the task.
+- `priority`: The priority level of the task (e.g., low, medium, high).
+- `status`: The current status of the task (e.g., pending, in-progress, completed).
+- `category`: The category or type of task (e.g., work, personal, study).
+- `due_date`: The due date for the task's completion.
+- `created_at`: Timestamp for when the task was created.
+- `updated_at`: Timestamp for when the task was last updated.
 
 #### Relationships:
-1. **User to Booking**: 
-   - A one-to-many relationship exists between the `User` and `Booking` tables. One user can make multiple bookings, but each booking is made by a single user.
-   
-2. **Table to Booking**: 
-   - A one-to-many relationship exists between the `Table` and `Booking` tables. Each table can have multiple bookings over time, but each booking refers to one specific table.
+1. **User to Task**: 
+   - A one-to-many relationship exists between the `User` and `Task` tables. One user can be assigned multiple tasks, but each task is assigned to one user.
 
-#### `on_delete` Considerations
-
+#### `on_delete` Considerations:
 - **User Deletion**:  
-  If a user is deleted, the `Booking` records associated with that user are retained, and the `user` field in those records is set to `null`. This ensures that the historical booking data remains intact for analytics, but without a reference to a non-existent user.
-
-- **Table Deletion**:  
-  If a table is deleted, all bookings associated with that table will be deleted, ensuring no invalid references to missing tables exist in the system.
-
-These tables allow the system to manage users, track reservations, and ensure that tables are properly allocated based on availability and bookings.
+  If a user is deleted, the tasks associated with that user are also deleted. This is due to the `CASCADE` deletion strategy, which ensures that when a user is deleted, all tasks related to that user will also be removed from the database.
 
 ### Core App
 
@@ -628,9 +607,9 @@ The single CSS file was validated using the [W3C Validation Service](https://jig
 ## User Story Testing
 The User Epics and Stories for this project are documented across 3 GitHub Projects, each corresponding to a specific iteration of the development work. However, as already mentioned only Iteration 1 has been addressed thus far with the remaining Iterations noted as part of future implementation. You can find the relevant Iterations here:
 
-- [Iteration 1]()
-- [Iteration 2]()
-- [Iteration 3]()
+- [Iteration 1](https://github.com/users/MFS4711/projects/7/views/1)
+- [Iteration 2](https://github.com/MFS4711/Hackathon-2-Task_Manager/milestone/2)
+- [Iteration 3](https://github.com/MFS4711/Hackathon-2-Task_Manager/milestone/3)
 
 Alternatively, the Epics and Stories are individually linked here :
 
@@ -792,7 +771,7 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 
 <!-- List Credit - Sources of images, research or code attributions -->
 
-- []()
+- [MFS4711 - Restaurant Web App Readme Template](https://github.com/MFS4711/Restaurant-Web-App)
 
 
 # Acknowledgements
