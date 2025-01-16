@@ -320,6 +320,28 @@ class TaskModelTest(TestCase):
         with self.assertRaises(ValidationError):
             task.full_clean()
 
+    def test_task_status_completed_to_todo(self):
+        """
+        Test that a task marked as 'Completed' cannot be changed back
+        to 'To Do'.
+        """
+        task = Task.objects.create(
+            user=self.user,
+            title="Completed Task",
+            description="A task that's already completed",
+            priority=Task.LOW,
+            status=Task.COMPLETED,
+            category=Task.STUDY,
+            due_date=timezone.now().date() + timedelta(days=5)
+        )
+
+        # Try to change it back to 'To Do'
+        task.status = Task.TO_DO
+
+        # Expect ValidationError to be raised due to invalid status transition
+        with self.assertRaises(ValidationError):
+            task.full_clean()
+
     def test_task_status_cannot_be_set_to_overdue_manually(self):
         """
         Test that a task cannot be manually set to 'Overdue'.

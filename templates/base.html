@@ -50,11 +50,12 @@
                                 href="{% url 'home' %}">Home</a>
                         </li>
                         <!-- User Dashboard -->
+                        {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == task_dashboard_url %}active"
-                                aria-current="page{% endif %}" href="{% url 'task_dashboard' %}">Task Dashboard</a>
+                                aria-current="page{% endif %}" href="{% url 'task_dashboard' user.id %}">Task Dashboard</a>
                         </li>
-
+                        {% endif %}
                         <!-- Links available to all users -->
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == contact_url %}active"
