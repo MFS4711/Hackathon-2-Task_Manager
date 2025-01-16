@@ -369,9 +369,7 @@ The User Epics and their related User Stories are as follows:
 ## Data Model
 This section provides an overview of the data models used in the project, represented through Entity-Relationship Diagrams (ERDs) for each application. Each sub-heading corresponds to a specific app, detailing its database schema and the relationships between key entities. These ERDs were drawn using [Lucidchart](https://www.lucidchart.com/pages/) and offer a clear visualization of how data is structured and flows within the application.
 
-<!-- Model Description in style below -->
-
-### Booking App
+### Task Management App
 
 ![Entity-relationship diagram for Task Management App](readme_images/erd/erd_task_management.png)
 
