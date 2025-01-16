@@ -1,7 +1,78 @@
-h1 {
-    color: red;
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+/* ----------------- Global Styles --------------------- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F7FA;
+    color: #2E2E2E;
+    margin: 0;
+    padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+    color: #167EA0;
+}
+
+
+/* -------------------------- Base Styling -------------------------- */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: rgba(8, 20, 36, 1);
+    padding: 0;
+}
+
+.navbar {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    color: #42C5F5;
+}
+
+.navbar-brand img {
+    width: 70px;
+    height: 70px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #F5F5F5;
+    letter-spacing: 0.05rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #42C5F5;
+}
+
+.navbar-nav .nav-link.active {
+    color: #42C5F5;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    background-color: #167EA0;
+    border-radius: 5px;
+}
 
 /* ------------- sahebachabra  ------------------ */
 
