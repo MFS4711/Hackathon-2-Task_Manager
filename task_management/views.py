@@ -7,9 +7,6 @@ from django.urls import reverse_lazy, reverse
 
 # Create your views here.
 
-def homepage(request):
-    return render(request, "core/index.html")
-
 def task_dashboard(request, user_id):
     
     # Fetch the user by user_id
@@ -27,7 +24,7 @@ def task_dashboard(request, user_id):
         task_form = TaskForm(data=request.POST)
         if task_form.is_valid():
             task = task_form.save(commit=False)
-            task.author = request.user
+            task.user = request.user
             task.save()
             messages.add_message(
                 request, messages.SUCCESS,
