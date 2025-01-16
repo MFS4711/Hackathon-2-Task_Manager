@@ -1,8 +1,10 @@
 from django.urls import path
+from .views import task_dashboard, task_edit, task_delete
 from . import views
 
 urlpatterns = [
-    # View to render the task-dashboard page
-    path('task-dashboard/<int:user_id>/', views.task_dashboard, name='task_dashboard'),
-
+    path('task-dashboard/<int:user_id>/', task_dashboard, name='task_dashboard'),
+    path('task-edit/<int:user_id>/<int:task_id>/', task_edit, name='task_edit'),
+    path('task-delete/<int:user_id>/<int:task_id>/', task_delete, name='task_delete'),
 ]
+
