@@ -40,10 +40,9 @@
 </table>
 
 <!-- Add Task Form -->
-<h2>Add a New Task</h2>
 <form method="POST">
     {% csrf_token %}
     {{ task_form.as_p }}
-    <button type="submit">Add Task</button>
+    <a href="{% url 'task_add' user.id %}">Add Task</a>
 </form>
 {% endblock %}

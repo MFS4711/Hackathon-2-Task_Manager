@@ -1,40 +1,21 @@
 {% extends 'base.html' %}
-{% block title %}Login{% endblock %}
+{% block title %}Add Task{% endblock %}
 {% block content %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django-Setup</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-
-<body>
-    {% if user.is_authenticated %}
-    <h1> Add Task</h1>
+{% if user.is_authenticated %}
+    <h1>Add Task</h1>
     <br /><br />
     <div class="mb-3">
         <br /><br />
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-info">Post</button>
+            {{ task_form.as_p }}
+            <button type="submit" class="btn btn-info">Post</button>
             <br /><br />
         </form>
     </div>
-    {% else %}
-    Please log in to edit/delete a post
-    {% endif %}
-
-
-
-
-</body>
-
-</html>
-
+{% else %}
+    <p>Please log in to add a task.</p>
+{% endif %}
 {% endblock %}
