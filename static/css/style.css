@@ -249,7 +249,7 @@ form.signup input[type="password"] {
 .hero-section {
     position: relative;
     height: 100vh;
-    background-image: url('../images/logo-transparent.png'); /* Replace with your hero image */
+    background-image: url('../images/logo-transparent.png');
     background-size: cover;
     background-position: center;
     color: #F5F7FA;
