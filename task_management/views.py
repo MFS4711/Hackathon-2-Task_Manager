@@ -104,4 +104,4 @@ def task_delete(request, user_id, task_id):
         messages.add_message(
             request, messages.ERROR, 'There was an error deleting the task. Please try again.')
 
-    return HttpResponseRedirect(reverse('task_dashboard', args=[task.user.id]))
+    return redirect('task_dashboard', user_id=request.user.id)

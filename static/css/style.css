@@ -31,6 +31,14 @@ h6 {
     display: none;
 }
 
+.modal {
+    background-color: rgba(8, 20, 36, 0.7);
+}
+
+.modal-content {
+    background-color: #1A3744;
+}
+
 /* -------------------------- Base Styling -------------------------- */
 
 header {
