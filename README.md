@@ -556,16 +556,9 @@ All JavaScript code is validated by the [ESLint](https://eslint.org/) (installed
 All HTML was validating using the page source of the deployed project using [W3C Markup Validation Service](https://validator.w3.org/). All pages were clear of all errors/warnings. There was only one page where an additonal factor was noted. This was on the menu page which had an 'info' warning. This was related to the way the Cloudinary image is used in the menu item modal.
 
 <details>
-<summary>... Page</summary>
+<summary>All Pages</summary>
 
-![menu.html_html_validation](/readme_images/html%20validation/menu.html_html_validation.png)
-
-</details>
-
-<details>
-<summary>... Other Pages</summary>
-
-![all-other-pages_html_validation](/readme_images/html%20validation/all-other-pages_html_validation.png)
+![all_pages_html_validation](/readme_images/html_validation/all_pages_html_validation.png)
 
 </details>
 
