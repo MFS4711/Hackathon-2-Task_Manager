@@ -133,7 +133,8 @@ footer .social-media a:hover {
 }
 
 /* Form Styles */
-form.login {
+form.login,
+form.logout {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -160,7 +161,8 @@ form.login input[type="password"]:focus {
 }
 
 form.login .primaryAction,
-form.login .secondaryAction {
+form.login .secondaryAction,
+form.logout .primaryAction {
     padding: 12px;
     font-size: 1rem;
     border-radius: 5px;
@@ -170,13 +172,15 @@ form.login .secondaryAction {
     margin-top: 15px;
 }
 
-form.login .primaryAction {
+form.login .primaryAction,
+form.logout .primaryAction {
     background-color: #42C5F5;
     color: #081424;
     border: none;
 }
 
-form.login .primaryAction:hover {
+form.login .primaryAction:hover,
+form.logout .primaryAction:hover {
     background-color: #167EA0;
 }
 
@@ -310,16 +314,3 @@ form.signup button:hover {
 
 
 /* ------------- MFS4711  ------------------ */
-
-
-
-
-
-
-
-
-
-
-
-
-
