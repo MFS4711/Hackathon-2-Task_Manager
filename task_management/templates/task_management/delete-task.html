@@ -1,22 +1,11 @@
-{% extends 'base.html' %}
-{% block title %}Login{% endblock %}
+{% extends "base.html" %}
+
 {% block content %}
-{% load static %}
-
-
-    <h1> Login</h1>
-    <br/><br/>
-    <div class="mb-3">
-        <br/><br/>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-info" >Login</button>
-        <br/><br/>
-    </div>
-
-    </form>
-
-   
-
+<h1>Please Confirm Task Deletion</h1>
+<p>Are you sure you want to delete the task: "{{ task.title }}"?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete</button>
+    <a href="{% url 'task_dashboard' user.id %}">Cancel</a>
+</form>
 {% endblock %}
