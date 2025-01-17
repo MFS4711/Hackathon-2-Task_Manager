@@ -120,6 +120,78 @@ footer .social-media a:hover {
     color: #42C5F5;
 }
 
+/* ------------- Authentication Pages  ------------------ */
+
+/* ---- Custom Styling for Authentication Page ---- */
+.authenticated-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(8, 20, 36, 1);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* .authenticated-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+} */
+
+/* Form Styles */
+form.login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form.login input[type="text"],
+form.login input[type="password"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #42C5F5;
+    border-radius: 5px;
+    background-color: #1A3744;
+    color: #F5F7FA;
+}
+
+form.login input[type="text"]:focus,
+form.login input[type="password"]:focus {
+    outline: none;
+    border-color: #42C5F5;
+}
+
+form.login .primaryAction,
+form.login .secondaryAction {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+form.login .primaryAction {
+    background-color: #42C5F5;
+    color: #081424;
+    border: none;
+}
+
+form.login .primaryAction:hover {
+    background-color: #167EA0;
+}
+
+form.login .secondaryAction {
+    background-color: transparent;
+    color: #42C5F5;
+    border: 1px solid #42C5F5;
+}
+
+form.login .secondaryAction:hover {
+    color: #F5F7FA;
+    background-color: #42C5F5;
+}
+
 /* ------------- sahebachabra  ------------------ */
 
 
