@@ -2,11 +2,13 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h1>Update Task</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ task_form | crispy }}
-    <button type="submit">Update Task</button>
-</form>
-<a href="{% url 'task_dashboard' user.id %}">Back to Dashboard</a>
+<div class="container crud-container">
+    <h1>Update Task</h1>
+    <form method="POST" class="task-form">
+        {% csrf_token %}
+        {{ task_form | crispy }}
+        <button type="submit" class="primaryAction">Update Task</button>
+        <a href="{% url 'task_dashboard' user.id %}" class="secondaryAction">Back to Dashboard</a>
+    </form>
+</div>
 {% endblock %}

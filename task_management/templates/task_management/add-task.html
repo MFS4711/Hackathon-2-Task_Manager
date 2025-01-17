@@ -1,23 +1,17 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-{% block title %}Add Task{% endblock %}
-{% block content %}
-{% load static %}
 
-{% if user.is_authenticated %}
-<h1>Add Task</h1>
-<br /><br />
-<div class="mb-3">
-    <br /><br />
-    <form method="POST">
+{% block title %}Add Task{% endblock %}
+
+{% block content %}
+<div class="container crud-container">
+    <h1>Add Task</h1>
+
+    <form method="POST" class="task-form">
         {% csrf_token %}
         {{ task_form | crispy }}
-        <button type="submit" class="btn btn-info">Post</button>
-        <br /><br />
+        <button type="submit" class="primaryAction">Create Task</button>
+        <a href="{% url 'task_dashboard' user.id %}" class="secondaryAction">Back to Dashboard</a>
     </form>
-    <a href="{% url 'task_dashboard' user.id %}">Back to Dashboard</a>
 </div>
-{% else %}
-<p>Please log in to add a task.</p>
-{% endif %}
 {% endblock %}

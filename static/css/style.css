@@ -370,3 +370,145 @@ form.signup input[type="password"] {
 }
 
 /* ------------ Dashboard page  -----------------------*/
+/* Styling for the Add Task page (matching login/signup form) */
+
+/* Main container for task form */
+.crud-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(8, 20, 36, 1);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label Styling */
+.task-form label {
+    font-weight: 600;
+    color: #F5F7FA;
+    font-size: 1rem;
+}
+
+/* Input field styling (for text, email, and password fields) */
+.task-form input[type="text"],
+.task-form input[type="email"],
+.task-form input[type="password"],
+.task-form input[type="date"],
+.task-form select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #42C5F5;
+    border-radius: 5px;
+    background-color: #1A3744;
+    color: #F5F7FA;
+    box-sizing: border-box;
+}
+
+/* Focused input fields */
+.task-form input[type="text"]:focus,
+.task-form input[type="email"]:focus,
+.task-form input[type="password"]:focus,
+.task-form input[type="date"]:focus,
+.task-form select:focus {
+    outline: none;
+    border-color: #42C5F5;
+}
+
+/* Styling for the Description Field (Text Area) */
+.task-form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #42C5F5;
+    border-radius: 5px;
+    background-color: #1A3744;
+    color: #F5F7FA;
+    box-sizing: border-box;
+    width: 100%;
+    resize: vertical; /* Allows users to resize the text area vertically */
+    min-height: 150px; /* Set a minimum height for the text area */
+}
+
+/* Focused Description Field */
+.task-form textarea:focus {
+    outline: none;
+    border-color: #42C5F5;
+}
+
+/* Submit Button Styling */
+.task-form button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #42C5F5;
+    color: #081424;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.task-form button:hover {
+    background-color: #167EA0;
+}
+
+/* Link Styling (Back to Dashboard) */
+.task-form .secondaryAction {
+    /* background-color: transparent; */
+    color: #42C5F5;
+    border: 1px solid #42C5F5;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    width: auto;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+.task-form .secondaryAction:hover {
+    color: #F5F7FA;
+    background-color: #42C5F5;
+}
+
+/* Styling for the Date Field */
+.task-form input[type="date"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #42C5F5;
+    border-radius: 5px;
+    background-color: #1A3744;
+    color: #F5F7FA;
+    box-sizing: border-box;
+}
+
+.task-form input[type="date"]:focus {
+    outline: none;
+    border-color: #42C5F5;
+}
+
+/* Styling for Select Fields (priority, status, category) */
+.task-form select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #42C5F5;
+    border-radius: 5px;
+    background-color: #1A3744;
+    color: #F5F7FA;
+    box-sizing: border-box;
+}
+
+.task-form select:focus {
+    outline: none;
+    border-color: #42C5F5;
+}

@@ -20,6 +20,10 @@ class TaskForm(forms.ModelForm):
                     'min': (timezone.now().date() + timedelta(days=1)).strftime('%Y-%m-%d'),
                 }
             ),
+            'priority': forms.Select(attrs={'class': 'form-control'}),
+            'status': forms.Select(attrs={'class': 'form-control'}),
+            'category': forms.Select(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 5}),
         }
 
     def clean_due_date(self):
