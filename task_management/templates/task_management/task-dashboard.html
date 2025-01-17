@@ -7,6 +7,42 @@
     <h1>Task Dashboard</h1>
     <h2>Welcome, {{ user.username }}</h2>
 
+    <!-- Overview Section (Task Counts by Status) -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <h5 class="card-title">To Do</h5>
+                    <p class="card-text">{{ task_counts.to_do }} tasks</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title">In Progress</h5>
+                    <p class="card-text">{{ task_counts.in_progress }} tasks</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <h5 class="card-title">Completed</h5>
+                    <p class="card-text">{{ task_counts.completed }} tasks</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger">
+                <div class="card-body">
+                    <h5 class="card-title">Overdue</h5>
+                    <p class="card-text">{{ task_counts.overdue }} tasks</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Add Task Button -->
     <a href="{% url 'task_add' user.id %}" class="btn btn-primary mb-3">Add Task</a>
 
@@ -35,7 +71,8 @@
                 <td>{{ task.category }}</td>
                 <td>{{ task.due_date }}</td>
                 <td>
-                    <a href="{% url 'task_edit' user.id task.id %}">Edit</a> |
+                    <a href="{% url 'task_edit' user.id task.id %}" class="btn btn-warning"
+                        aria-label="Edit task {{ task.id }}">Edit</a> |
                     <a href="#" class="btn btn-danger delete-btn" data-task-id="{{ task.id }}"
                         data-user-id="{{ user.id }}" data-bs-toggle="modal" data-bs-target="#deleteModal"
                         aria-label="Delete task {{ task.id }}">Delete</a>
@@ -53,7 +90,7 @@
     {% endif %}
 
     <!-- Upcoming Tasks Section -->
-    <h3>Tasks Due in the Next 7 Days</h3>
+    <h3>Tasks Due in the Next {{ filters.visibility|default:"7 days" }}</h3>
     <form method="GET" class="mb-3">
         <div class="row">
             <div class="col">
@@ -87,6 +124,17 @@
                 </select>
             </div>
             <div class="col">
+                <select name="visibility" class="form-select">
+                    <option value="7 days" {% if filters.visibility == '7_days' %}selected{% endif %}>Next 7 Days
+                    </option>
+                    <option value="2 weeks" {% if filters.visibility == '2_weeks' %}selected{% endif %}>Next 2 Weeks
+                    </option>
+                    <option value="month" {% if filters.visibility == '1_month' %}selected{% endif %}>Next Month
+                    </option>
+                    <option value="all" {% if filters.visibility == 'all' %}selected{% endif %}>All</option>
+                </select>
+            </div>
+            <div class="col">
                 <button type="submit" class="btn btn-primary">Filter</button>
                 <!-- Reset Filter Button -->
                 <a href="{% url 'task_dashboard' user.id %}" class="btn btn-secondary">Reset Filters</a>
@@ -117,7 +165,8 @@
                 <td>{{ task.category }}</td>
                 <td>{{ task.due_date }}</td>
                 <td>
-                    <a href="{% url 'task_edit' user.id task.id %}">Edit</a> |
+                    <a href="{% url 'task_edit' user.id task.id %}" class="btn btn-warning"
+                        aria-label="Edit task {{ task.id }}">Edit</a> |
                     <a href="#" class="btn btn-danger delete-btn" data-task-id="{{ task.id }}"
                         data-user-id="{{ user.id }}" data-bs-toggle="modal" data-bs-target="#deleteModal"
                         aria-label="Delete task {{ task.id }}">Delete</a>
@@ -125,13 +174,54 @@
             </tr>
             {% empty %}
             <tr>
-                <td colspan="7">No tasks due in the next 7 days.</td>
+                <td colspan="7">No upcoming tasks found.</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
     {% else %}
-    <p>No tasks due in the next 7 days.</p>
+    <p>No tasks due in the selected period.</p>
+    {% endif %}
+
+    <!-- Completed Tasks Section -->
+    <h3>Completed Tasks</h3>
+    {% if completed_tasks %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Category</th>
+                <th>Due Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in completed_tasks %}
+            <tr>
+                <td>{{ task.title }}</td>
+                <td>{{ task.description }}</td>
+                <td>{{ task.priority }}</td>
+                <td>{{ task.status }}</td>
+                <td>{{ task.category }}</td>
+                <td>{{ task.due_date }}</td>
+                <td>
+                    <a href="#" class="btn btn-danger delete-btn" data-task-id="{{ task.id }}"
+                        data-user-id="{{ user.id }}" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                        aria-label="Delete task {{ task.id }}">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7">No completed tasks found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No completed tasks.</p>
     {% endif %}
 </div>
 
