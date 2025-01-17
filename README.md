@@ -80,25 +80,61 @@ The following pages are visible to all users, logged in or not.
 <details>
 <summary>Homepage (landing page)</summary>
 
-<!-- Page Description of features -->
+### Key Features  
 
-![Hero Section](/readme_images/feature_section/Home-1.png) 
+- **Primary Actions**:  
+  The landing page offers users two clear options:  
+  - Sign Up/ Get Started
+  - Log in  
 
-</details>
+- **Header Navigation**:  
+  The header includes the following elements, displayed left to right:  
+  - **Site Icon**: Clickable, redirects users back to the homepage from any page.  
+  - **Nav-links**:  
+    - Home (with an active class to indicate the current page; appears bold and underlined) 
+    - Contact
+    - Login
+    - Register
 
-<details>
-<summary>... Page</summary>
+  #### Role-Based Navigation Modifications:  
+  - **Authenticated Users**:  
+    - **Dashboard**: Appears between Home and Contact links.  
+    - **Logout**: Replaces the Login and Register links.   
 
-![Hero Section](/readme_images/feature_section/Home-1.png) 
+### Hero Section  
 
-</details>
+- **Visuals**:  
+  - The opening viewport prominently displays a motivational statement with the action button, positioned over a full-screen hero image which is the logo.  
 
-<details>
-<summary>... Page</summary>
+- **Actions**:  
+  - One clear button:  
+    - Sign Up/ Get Started
+  Both buttons redirect users to their respective pages. 
 
+![Hero Section](/readme_images/features/features_homepage.png) 
 
+### Secondary Content  
 
-![Booking Page](/readme_images/feature_section/booking-1.png)
+- **About Section**:  
+  - Highlights the company's focus and reasoning for web app
+
+- **Web App Functions**:  
+  - Displayed in a **distinctive card layout**.  
+
+- **Reminder Actions**:  
+  - Additional buttons for "Get Started" and "Login" to reinforce the main actions on the page.  
+
+![Secondary Content](/readme_images/features/features_homepage_2.png) 
+
+### Footer  
+
+- The footer is consistent across all pages and divided into four sections:  
+  - **Company Logo**: Clickable, redirects users to the landing page.  
+  - **Key Features**: Displays the project functionalities. 
+  - **Address**: Shows the physical location of the business.  
+  - **Get in Touch and Socials**: Provides contact details and social media links. 
+
+![Footer](/readme_images/features/features_homepage_3.png) 
 
 </details>
 
@@ -108,7 +144,7 @@ This page simply shows the navbar and the footer which takes up the whole viewpo
 
 - The footer is consistent across all pages and divided into four sections:  
   - **Company Logo**: Clickable, redirects users to the landing page.  
-  - **Opening Hours**: Displays the business hours.  
+  - **Key Features**: Displays the project functionalities.   
   - **Address**: Shows the physical location of the business.  
   - **Get in Touch and Socials**: Provides contact details and social media links. 
 
@@ -121,7 +157,7 @@ This page simply shows the navbar and the footer which takes up the whole viewpo
 
 This is the standard allauth login page, styled with the site styling.
 
-![Login Page](/readme_images/feature_section/login.png)
+![Login Page](/readme_images/features/features_login.png)
 
 </details>
 
@@ -130,7 +166,7 @@ This is the standard allauth login page, styled with the site styling.
 
 This is the standard allauth signup page, with fields for email, username, and password + password confirmation. All fields bar the email are required.
 
-![Register Page](/readme_images/feature_section/signup.png)
+![Register Page](/readme_images/features/features_signup.png)
 
 </details>
 
@@ -138,86 +174,26 @@ This is the standard allauth signup page, with fields for email, username, and p
 The following pages are only available to logged in users.
 
 <details>
-<summary>... Page</summary>
+<summary>Dashboard Page</summary>
 
-![Book a Table Page](/readme_images/feature_section/booking-2.png)
+<!-- REMOVE WHEN SECTION COMPLETED -->
 
-</details>
-
-<details>
-<summary>... Page</summary>
-
-![Booking Success](/readme_images/feature_section/booking-3.png)
-
-</details>
-
-## Customer (Authenticated)
-The following page is only accessible by the individual customer:
-
-<details>
-<summary>User Dashboard Page</summary>
-
-![Customer Dashboard Page](/readme_images/feature_section/customer-dashboard.png)
+![Book a Table Page](/readme_images/features)
 
 </details>
 
 <details>
-<summary>... Page</summary>
+<summary>Logout Page</summary>
 
-![Update Bookings Page](/readme_images/feature_section/update_booking-3.png)
+This is the standard allauth logout page, with a button to logout.
 
-</details>
-
-<details>
-<summary>... Page</summary>
-
-![Update Bookings Page](/readme_images/feature_section/update_booking-4.png)
-
-</details>
-
-## Staff (Authenticated)
-The following pages are only accessible by staff
-
-<details>
-<summary>... Page</summary>
-
-![Staff Dashboard Page](/readme_images/feature_section/staff-dashboard.png)
-
-</details>
-
-<details>
-<summary>.... Page</summary>
-
-![Manage Bookings Page](/readme_images/feature_section/manage_booking-2.png)
-
-</details>
-
-<details>
-<summary>... Page - Staff</summary>
-
-![Update Bookings Page](/readme_images/feature_section/update_booking-2.png)
-
-</details>
-
-## Admin/Superusers (Authenticated)
-The following pages are only accessible by admin:
-
-<details>
-<summary>... Page</summary>
-
-![Admin Dashboard Page](/readme_images/feature_section/admin-dashboard.png)
-
-</details>
-
-<details>
-<summary>... Page</summary>
-
-![Menu Page](/readme_images/feature_section/menu-3.png)
+![Booking Success](/readme_images/features/features_logout.png)
 
 </details>
 
 
 ## Future Features
+<!-- REMOVE WHEN SECTION COMPLETED -->
 <!-- List Future Features -->
 
 ---
@@ -239,25 +215,33 @@ For body text, Inter was chosen due to its simplicity and excellent legibility, 
 ### Colour
 The following colour palette was used in the project:
 
-![colour_palette](/readme_images/colours/cedar_and_flame_colour_palette.png)
+![colour_palette](/readme_images/colours/colour_palette.png)
 
-<!-- List Colours - and significance -->
+- **#F5F7FA (Anti-Flash White):** Used for body text, providing readability on dark backgrounds and ensuring clarity for users.
+- **#42C5F5 (Vivid Sky Blue):** Highlights important elements like headings, links, and buttons, drawing attention to key actions such as navigation and form submissions.
+- **#1A3744 (Gunmetal):** Used as the primary background color to create a dark, professional atmosphere while maintaining contrast with lighter text for readability.
+- **#081424 (Rich Black):** Applied to footer backgrounds and certain section overlays to separate content areas, adding depth and focus to the design.
 
 #### _Colour Contrast (Font against Background)_
 
-<!-- Coolers contrast checker - foreground v background -->
-
 <details>
-<summary>#F5F5F5 (White Smoke) and #333333 (Jet)</summary>
+<summary>#F5F7FA (Anti-Flash White) and #1A3744 (Gunmetal)</summary>
 
-![contrast-white_smoke-jet](/readme_images/colours/contrast-white_smoke-jet.png)
+![anti_flash_white-gunmetal](/readme_images/colours/anti_flash_white-gunmetal.png)
 
 </details>
 
 <details>
-<summary>#F5F5F5 (White Smoke) and #444444 (Onyx)</summary>
+<summary>#F5F7FA (Anti-Flash White) and #081424 (Rich Black)</summary>
 
-![contrast-white_smoke-onyx](/readme_images/colours/contrast-white_smoke-onyx.png)
+![anti_flash_white-rich_black](/readme_images/colours/anti_flash_white-rich_black.png)
+
+</details>
+
+<details>
+<summary>#42C5F5 (Vivid Sky Blue) and #1A3744 (Gunmetal)</summary>
+
+![vivid_sky_blue-gunmetal](/readme_images/colours/vivid_sky_blue-gunmetal.png)
 
 </details>
 
@@ -410,6 +394,8 @@ This app does not contain any models. It is designed to serve as a container for
 
 ## Data Validation
 
+<!-- REMOVE WHEN SECTION COMPLETED -->
+
 <!-- Any specific custom validation - Js/python -->
 
 ---
@@ -425,8 +411,6 @@ The Testing section covers various strategies used to ensure the application's f
 ### Feature Testing
 The manual testing of features is organised by app below. Testing was carried out on a 1920 x 1080 desktop screen, a Samsung tablet and an Samsung S22 Ultra.
 
-<!-- In style below -->
-
 <details>
 <summary>Core App, Navbar and Footer</summary>
 
@@ -440,12 +424,7 @@ The manual testing of features is organised by app below. Testing was carried ou
 |/|Navbar - larger screens - all nav-links visible|Navigate to page|Elements appear correctly|
 |/|Navbar - larger screens - all nav-links visible|Navigate to page|Elements appear correctly|
 |/|Navbar - Home link leads to / |Click link|User redirected to home page|
-|/|Navbar - Authenticated customer - Customer Dashboard link leads to /customer-dashboard/ |Click link|User redirected to Customer Dashboard page|
-|/|Navbar - Authenticated staff/admin - Staff Dashboard link leads to /staff-dashboard/ |Click link|User redirected to Staff Dashboard page|
-|/|Navbar - Authenticated admin - Admin Dashboard link leads to /admin-dashboard/ |Click link|User redirected to Admin Dashboard page|
-|/|Navbar - Menu link leads to /menu/|Click link|User redirected to Menu page|
-|/|Navbar - Book a Table link leads to /booking/|Click link|User redirected to Booking page|
-|/|Navbar - Authenticated staff/admin - Manage Bookings link leads to /manage-booking/ |Click link|User redirected to Manage Bookings page|
+|/|Navbar - Authenticated user - Dashboard link leads to /dashboard/ |Click link|User redirected to User Dashboard page|
 |/|Navbar - Contact link leads to /contact/|Click link|User redirected to Contact page|
 |/|Navbar - Login link leads to /login/|Click link|User redirected to Login page|
 |/|Navbar - Sign Up link leads to /signup/|Click link|User redirected to Sign Up page|
@@ -458,6 +437,8 @@ The manual testing of features is organised by app below. Testing was carried ou
 
 <details>
 <summary>Dashboard App</summary>
+
+<!-- REMOVE WHEN SECTION COMPLETED -->
 
 |Page|Feature|Action|Effect|
 |---|---|---|---|
@@ -474,6 +455,8 @@ The results are displayed by page below:
 
 <details>
 <summary>Lighthouse results by page</summary>
+
+<!-- REMOVE WHEN SECTION COMPLETED -->
 
 - Homepage (Landing Page)
 
@@ -562,16 +545,9 @@ All python code is validated by the [Flake8 linter](https://flake8.pycqa.org/en/
 All JavaScript code is validated by the [ESLint](https://eslint.org/) (installed in VSCode) and [JS Hinterface](https://mfs4711.github.io/jshint-api/). Custom JS was present only in the Booking and Menu Apps respectively.
 
 <details>
-<summary>... App</summary>
+<summary>Task Management App</summary>
 
 ![booking_js-validation](/readme_images/js_validation/booking_js-validation.png)
-
-</details>
-
-<details>
-<summary>... App</summary>
-
-![menu_js-validation](/readme_images/js_validation/menu_js-validation.png)
 
 </details>
 
@@ -580,16 +556,9 @@ All JavaScript code is validated by the [ESLint](https://eslint.org/) (installed
 All HTML was validating using the page source of the deployed project using [W3C Markup Validation Service](https://validator.w3.org/). All pages were clear of all errors/warnings. There was only one page where an additonal factor was noted. This was on the menu page which had an 'info' warning. This was related to the way the Cloudinary image is used in the menu item modal.
 
 <details>
-<summary>... Page</summary>
+<summary>All Pages</summary>
 
-![menu.html_html_validation](/readme_images/html%20validation/menu.html_html_validation.png)
-
-</details>
-
-<details>
-<summary>... Other Pages</summary>
-
-![all-other-pages_html_validation](/readme_images/html%20validation/all-other-pages_html_validation.png)
+![all_pages_html_validation](/readme_images/html_validation/all_pages_html_validation.png)
 
 </details>
 
@@ -636,38 +605,15 @@ Testing of the Booking Form raised an issue regarding the form validation preven
 This section provides an overview of the bugs encountered during development, along with their resolutions. Any remaining issues or notable fixes are also tracked for reference.
 
 Several bugs encountered during development and their solutions are documented in the GitHub issues tracker. Some notable examples include:
+
+<!-- REMOVE WHEN SECTION COMPLETED -->
+
 <!-- Add issues in Github and link in list below - Add comments of fixes in Issue -->
 - [BUG - ]()
 
 ## Remaining Bugs
 
-<!-- Any remaining bugs in structure below -->
-
-### Bug: Staff Booking Form - Table Availability Check Issue
-
-#### Description:
-There is a bug related to the process of amending or cancelling a booking that has an assigned table. The issue arises because the `StaffBookingForm` performs a table availability check during form validation, which requires an available table to be assigned to the booking in order for the form to be submitted. 
-
-When a staff member tries to change the status of a booking (e.g., from `Confirmed` to `Cancelled`, `No Show`, or other statuses), the form expects the table to be available. However, the table should be freed when the status is set to `Cancelled`. This results in a situation where staff cannot update or cancel a booking unless a valid, available table is assigned, which is not the intended behavior for handling status changes.
-
-#### Impact:
-This bug only affects the staff booking form. It prevents staff from updating the booking status (e.g., cancelling or changing the status of a booking) unless a table is assigned, even though the table should be cleared when the status is set to `Cancelled`.
-
-This issue does **not** impact customer bookings, as the related forms do not require a table availability check.
-
-#### Observed Bug:
-- **Issue**: To change the status of a booking (e.g., to cancel a booking or update its status), staff are required to assign an available table to the booking before submitting the form. This prevents staff from properly changing the status to `Cancelled`, `No Show`, etc., because a table needs to be available.
-- **GitHub Issue**: You can track the bug and potential fixes here:  
-  [BUG - Staff Booking Form - Staff need to assign an available table to change the booking status](https://github.com/MFS4711/Restaurant-Web-App/issues/49)
-
-#### Attempts at Fixing:
-- **First Approach**: A potential fix was explored by modifying the `clean_table` method to skip the table availability check when the booking status is `Cancelled` or being updated. Despite multiple attempts, this solution has not been successful in resolving the issue.
-  
-- **Second Approach**: Another potential solution considered is removing the `status` field from the `StaffBookingForm` and controlling the status assignment directly in the view instead. This approach has not been implemented yet, but it will be explored in future iterations.
-
-#### Next Steps:
-- Further investigation is needed to ensure that the table availability check is correctly bypassed when the booking status is set to `Cancelled` (so the table can be freed) or updated.
-- Future fixes will focus on handling the status field more appropriately, possibly removing it from the form or adjusting the validation logic to handle status changes without requiring a table to be assigned.
+There are hopefull no bugs remaining.
 
 ---
 
@@ -689,14 +635,10 @@ This section highlights the key libraries, tools, and platforms utilised through
     - Heroku was used for deploying the project.
 6. [pytest](https://docs.pytest.org/en/7.1.x/)
     - Pytest was used for automated testing of the project.
-7. [Canva](https://www.canva.com/ai-logo-generator/)
-    - Canva was used to generate the logo for this project
-8. [Photoroom](https://www.photoroom.com/tools/transparent-background)
+7. [Photoroom](https://www.photoroom.com/tools/transparent-background)
     - Photoroom was used to transfomr images to have a transparent background
-9. [ChatGPT](https://chatgpt.com/)
+8. [ChatGPT](https://chatgpt.com/)
     - ChatGPT was the primary AI tool used to aid development through a variety of areas such as bug-fixing, tests devlopment, introduction to form and model methods, improving accessibility and code maintainability as well as initial planning such as outlining scope and developing Epics and Stories.
-10. [Pexels](https://www.pexels.com/)
-    - Pexels was used as the primary source of background images used in the project.
 
 ---
 
@@ -768,14 +710,14 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 [Return to top](#focusflow)
 
 # Credits
-
+<!-- REMOVE WHEN SECTION COMPLETED -->
 <!-- List Credit - Sources of images, research or code attributions -->
 
 - [MFS4711 - Restaurant Web App Readme Template](https://github.com/MFS4711/Restaurant-Web-App)
 
 
 # Acknowledgements
-
+<!-- REMOVE WHEN SECTION COMPLETED -->
 <!-- Acknowledgements paragraph -->
 
 ---
