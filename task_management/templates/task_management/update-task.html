@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <h1>Update Task</h1>
 <form method="POST">
     {% csrf_token %}
-    {{ task_form.as_p }}
+    {{ task_form | crispy }}
     <button type="submit">Update Task</button>
 </form>
 <a href="{% url 'task_dashboard' user.id %}">Back to Dashboard</a>

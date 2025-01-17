@@ -4,13 +4,13 @@
 
 {% block content %}
 <div class="container content-container">
-    <h1>Task Dashboard</h1>
-    <h2>Welcome, {{ user.username }}</h2>
+    <h1 class="page-heading">Task Dashboard</h1>
+    <h2 class="welcome-message">Welcome, {{ user.username }}</h2>
 
     <!-- Overview Section (Task Counts by Status) -->
     <div class="row mb-4">
         <div class="col-md-3">
-            <div class="card text-white bg-primary">
+            <div class="card text-white bg-primary custom-card">
                 <div class="card-body">
                     <h5 class="card-title">To Do</h5>
                     <p class="card-text">{{ task_counts.to_do }} tasks</p>
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card text-white bg-warning">
+            <div class="card text-white bg-warning custom-card">
                 <div class="card-body">
                     <h5 class="card-title">In Progress</h5>
                     <p class="card-text">{{ task_counts.in_progress }} tasks</p>
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card text-white bg-success">
+            <div class="card text-white bg-success custom-card">
                 <div class="card-body">
                     <h5 class="card-title">Completed</h5>
                     <p class="card-text">{{ task_counts.completed }} tasks</p>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card text-white bg-danger">
+            <div class="card text-white bg-danger custom-card">
                 <div class="card-body">
                     <h5 class="card-title">Overdue</h5>
                     <p class="card-text">{{ task_counts.overdue }} tasks</p>
@@ -44,12 +44,12 @@
     </div>
 
     <!-- Add Task Button -->
-    <a href="{% url 'task_add' user.id %}" class="btn btn-primary mb-3">Add Task</a>
+    <a href="{% url 'task_add' user.id %}" class="btn btn-primary mb-3 custom-btn">Add Task</a>
 
     <!-- Overdue Tasks Section -->
-    <h3>Overdue Tasks</h3>
+    <h3 class="section-heading overdue-section-heading">Overdue Tasks</h3>
     {% if overdue_tasks %}
-    <table class="table table-bordered">
+    <table class="table table-bordered overdue-table">
         <thead>
             <tr>
                 <th>Title</th>
@@ -72,7 +72,7 @@
                 <td>{{ task.due_date }}</td>
                 <td>
                     <a href="{% url 'task_edit' user.id task.id %}" class="btn btn-warning"
-                        aria-label="Edit task {{ task.id }}">Edit</a> |
+                        aria-label="Edit task {{ task.id }}">Edit</a>
                     <a href="#" class="btn btn-danger delete-btn" data-task-id="{{ task.id }}"
                         data-user-id="{{ user.id }}" data-bs-toggle="modal" data-bs-target="#deleteModal"
                         aria-label="Delete task {{ task.id }}">Delete</a>
@@ -90,7 +90,7 @@
     {% endif %}
 
     <!-- Upcoming Tasks Section -->
-    <h3>Tasks Due in the Next {{ filters.visibility|default:"7 days" }}</h3>
+    <h3 class="section-heading">Tasks Due in the Next {{ filters.visibility|default:"7 days" }}</h3>
     <form method="GET" class="mb-3">
         <div class="row">
             <div class="col">
@@ -135,9 +135,9 @@
                 </select>
             </div>
             <div class="col">
-                <button type="submit" class="btn btn-primary">Filter</button>
+                <button type="submit" class="btn btn-primary custom-btn">Filter</button>
                 <!-- Reset Filter Button -->
-                <a href="{% url 'task_dashboard' user.id %}" class="btn btn-secondary">Reset Filters</a>
+                <a href="{% url 'task_dashboard' user.id %}" class="btn btn-secondary custom-btn">Reset Filters</a>
             </div>
         </div>
     </form>
@@ -166,7 +166,7 @@
                 <td>{{ task.due_date }}</td>
                 <td>
                     <a href="{% url 'task_edit' user.id task.id %}" class="btn btn-warning"
-                        aria-label="Edit task {{ task.id }}">Edit</a> |
+                        aria-label="Edit task {{ task.id }}">Edit</a>
                     <a href="#" class="btn btn-danger delete-btn" data-task-id="{{ task.id }}"
                         data-user-id="{{ user.id }}" data-bs-toggle="modal" data-bs-target="#deleteModal"
                         aria-label="Delete task {{ task.id }}">Delete</a>
@@ -184,7 +184,7 @@
     {% endif %}
 
     <!-- Completed Tasks Section -->
-    <h3>Completed Tasks</h3>
+    <h3 class="section-heading">Completed Tasks</h3>
     {% if completed_tasks %}
     <table class="table table-bordered">
         <thead>
