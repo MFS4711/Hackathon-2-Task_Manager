@@ -1,9 +1,75 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container content-container">
-    <h1>HOMEPAGE</h1>
-</div>
+<!-- Hero Section with Background Image -->
+<section class="hero-section d-flex justify-content-center align-items-center text-center">
+    <div class="overlay"></div>
+    <div class="hero-container">
+        <div class="hero-text">
+            <h1 class="display-4 lead">Stay Focused, Stay Productive</h1>
+            <p class="lead">Manage your tasks efficiently with FocusFlow. Prioritise, categorise, and track your
+                progress in one place.</p>
+            <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
+    </div>
+</section>
 
+<!-- About Section -->
+<section class="about-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="lead">FocusFlow is a powerful task management app designed to help you stay on top of your
+                    personal and professional goals. With features like prioritisation, categorisation, and status
+                    tracking, you can organise tasks and meet deadlines without stress.</p>
+                <p class="lead">Whether you're managing work projects, personal errands, or study goals, FocusFlow
+                    adapts to your needs and helps you stay focused and productive.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Use Section -->
+<section class="how-to-use bg-dark py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="step-box text-center">
+                    <h4>Create Tasks</h4>
+                    <p>Create tasks with clear titles, descriptions, and deadlines. Organise them into categories like
+                        Work, Personal, or Study.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="step-box text-center">
+                    <h4>Prioritise</h4>
+                    <p>Set the priority of each task to ensure you focus on what matters most. Choose from high, medium,
+                        or low priority.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="step-box text-center">
+                    <h4>Track Progress</h4>
+                    <p>Mark your tasks as "In Progress" and "Completed". Tasks that are overdue are automatically
+                        flagged for you to address.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta-section py-5">
+    <h2 class="display-4">Get Started</h2>
+    <p class="lead">Ready to organise your tasks and improve productivity? Sign up now and start using
+        FocusFlow today!</p>
+    <a href="{% url 'account_signup' %}" class="btn btn-primary btn-lg">Sign Up</a>
+</section>
+
+<!-- User Dashboard Section -->
+<section class="user-dashboard py-5">
+    <h2>Already Have an Account?</h2>
+    <p><a href="{% url 'account_login' %}" class="btn btn-secondary btn-lg">Log In</a></p>
+</section>
 
 {% endblock content %}
