@@ -80,25 +80,68 @@ The following pages are visible to all users, logged in or not.
 <details>
 <summary>Homepage (landing page)</summary>
 
-<!-- Page Description of features -->
+### Key Features  
 
-![Hero Section](/readme_images/feature_section/Home-1.png) 
+- **Primary Actions**:  
+  The landing page offers users two clear options:  
+  - Sign Up/ Get Started
+  - Log in  
+
+- **Header Navigation**:  
+  The header includes the following elements, displayed left to right:  
+  - **Site Icon**: Clickable, redirects users back to the homepage from any page.  
+  - **Nav-links**:  
+    - Home (with an active class to indicate the current page; appears bold and underlined) 
+    - Contact
+    - Login
+    - Register
+
+  #### Role-Based Navigation Modifications:  
+  - **Authenticated Users**:  
+    - **Dashboard**: Appears between Home and Contact links.  
+    - **Logout**: Replaces the Login and Register links.   
+
+### Hero Section  
+
+- **Visuals**:  
+  - The opening viewport prominently displays a motivational statement with the action button, positioned over a full-screen hero image which is the logo.  
+
+- **Actions**:  
+  - One clear button:  
+    - Sign Up/ Get Started
+  Both buttons redirect users to their respective pages. 
+
+![Hero Section](/readme_images/features/features_homepage.png) 
+
+### Secondary Content  
+
+- **About Section**:  
+  - Highlights the company's focus and reasoning for web app
+
+- **Web App Functions**:  
+  - Displayed in a **distinctive card layout**.  
+
+- **Reminder Actions**:  
+  - Additional buttons for "Get Started" and "Login" to reinforce the main actions on the page.  
+
+![Secondary Content](/readme_images/features/features_homepage_2.png) 
+
+### Footer  
+
+- The footer is consistent across all pages and divided into four sections:  
+  - **Company Logo**: Clickable, redirects users to the landing page.  
+  - **Key Features**: Displays the project functionalities. 
+  - **Address**: Shows the physical location of the business.  
+  - **Get in Touch and Socials**: Provides contact details and social media links. 
+
+![Footer](/readme_images/features/features_homepage_3.png) 
 
 </details>
 
 <details>
-<summary>... Page</summary>
+<summary>Dashboard Page</summary>
 
 ![Hero Section](/readme_images/feature_section/Home-1.png) 
-
-</details>
-
-<details>
-<summary>... Page</summary>
-
-
-
-![Booking Page](/readme_images/feature_section/booking-1.png)
 
 </details>
 
@@ -108,7 +151,7 @@ This page simply shows the navbar and the footer which takes up the whole viewpo
 
 - The footer is consistent across all pages and divided into four sections:  
   - **Company Logo**: Clickable, redirects users to the landing page.  
-  - **Opening Hours**: Displays the business hours.  
+  - **Key Features**: Displays the project functionalities.   
   - **Address**: Shows the physical location of the business.  
   - **Get in Touch and Socials**: Provides contact details and social media links. 
 
@@ -121,7 +164,7 @@ This page simply shows the navbar and the footer which takes up the whole viewpo
 
 This is the standard allauth login page, styled with the site styling.
 
-![Login Page](/readme_images/feature_section/login.png)
+![Login Page](/readme_images/features/features_login.png)
 
 </details>
 
@@ -130,7 +173,7 @@ This is the standard allauth login page, styled with the site styling.
 
 This is the standard allauth signup page, with fields for email, username, and password + password confirmation. All fields bar the email are required.
 
-![Register Page](/readme_images/feature_section/signup.png)
+![Register Page](/readme_images/features/features_signup.png)
 
 </details>
 
@@ -138,81 +181,18 @@ This is the standard allauth signup page, with fields for email, username, and p
 The following pages are only available to logged in users.
 
 <details>
-<summary>... Page</summary>
+<summary>Dashboard Page</summary>
 
-![Book a Table Page](/readme_images/feature_section/booking-2.png)
-
-</details>
-
-<details>
-<summary>... Page</summary>
-
-![Booking Success](/readme_images/feature_section/booking-3.png)
-
-</details>
-
-## Customer (Authenticated)
-The following page is only accessible by the individual customer:
-
-<details>
-<summary>User Dashboard Page</summary>
-
-![Customer Dashboard Page](/readme_images/feature_section/customer-dashboard.png)
+![Book a Table Page](/readme_images/features)
 
 </details>
 
 <details>
-<summary>... Page</summary>
+<summary>Logout Page</summary>
 
-![Update Bookings Page](/readme_images/feature_section/update_booking-3.png)
+This is the standard allauth logout page, with a button to logout.
 
-</details>
-
-<details>
-<summary>... Page</summary>
-
-![Update Bookings Page](/readme_images/feature_section/update_booking-4.png)
-
-</details>
-
-## Staff (Authenticated)
-The following pages are only accessible by staff
-
-<details>
-<summary>... Page</summary>
-
-![Staff Dashboard Page](/readme_images/feature_section/staff-dashboard.png)
-
-</details>
-
-<details>
-<summary>.... Page</summary>
-
-![Manage Bookings Page](/readme_images/feature_section/manage_booking-2.png)
-
-</details>
-
-<details>
-<summary>... Page - Staff</summary>
-
-![Update Bookings Page](/readme_images/feature_section/update_booking-2.png)
-
-</details>
-
-## Admin/Superusers (Authenticated)
-The following pages are only accessible by admin:
-
-<details>
-<summary>... Page</summary>
-
-![Admin Dashboard Page](/readme_images/feature_section/admin-dashboard.png)
-
-</details>
-
-<details>
-<summary>... Page</summary>
-
-![Menu Page](/readme_images/feature_section/menu-3.png)
+![Booking Success](/readme_images/features/features_logout.png)
 
 </details>
 
