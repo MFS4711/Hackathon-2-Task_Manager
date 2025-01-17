@@ -7,8 +7,13 @@
     <h1>Task Dashboard</h1>
     <h2>Welcome, {{ user.username }}</h2>
 
-    <!-- Task List -->
-    <table>
+    <!-- Add Task Button -->
+    <a href="{% url 'task_add' user.id %}" class="btn btn-primary mb-3">Add Task</a>
+
+    <!-- Overdue Tasks Section -->
+    <h3>Overdue Tasks</h3>
+    {% if overdue_tasks %}
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th>Title</th>
@@ -21,7 +26,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for task in tasks %}
+            {% for task in overdue_tasks %}
             <tr>
                 <td>{{ task.title }}</td>
                 <td>{{ task.description }}</td>
@@ -38,35 +43,113 @@
             </tr>
             {% empty %}
             <tr>
-                <td colspan="7">No tasks found.</td>
+                <td colspan="7">No overdue tasks found.</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+    {% else %}
+    <p>No overdue tasks at the moment.</p>
+    {% endif %}
 
-    <!-- Add Task Form -->
-    <form method="POST">
-        {% csrf_token %}
-        {{ task_form.as_p }}
-        <a href="{% url 'task_add' user.id %}">Add Task</a>
+    <!-- Upcoming Tasks Section -->
+    <h3>Tasks Due in the Next 7 Days</h3>
+    <form method="GET" class="mb-3">
+        <div class="row">
+            <div class="col">
+                <select name="status" class="form-select">
+                    <option value="">Status</option>
+                    <option value="To Do" {% if filters.status == 'To Do' %}selected{% endif %}>To Do</option>
+                    <option value="In Progress" {% if filters.status == 'In Progress' %}selected{% endif %}>In Progress
+                    </option>
+                    <option value="Completed" {% if filters.status == 'Completed' %}selected{% endif %}>Completed
+                    </option>
+                    <option value="Overdue" {% if filters.status == 'Overdue' %}selected{% endif %}>Overdue</option>
+                </select>
+            </div>
+            <div class="col">
+                <select name="priority" class="form-select">
+                    <option value="">Priority</option>
+                    <option value="High" {% if filters.priority == 'High' %}selected{% endif %}>High</option>
+                    <option value="Medium" {% if filters.priority == 'Medium' %}selected{% endif %}>Medium</option>
+                    <option value="Low" {% if filters.priority == 'Low' %}selected{% endif %}>Low</option>
+                </select>
+            </div>
+            <div class="col">
+                <select name="category" class="form-select">
+                    <option value="">Category</option>
+                    <option value="Work" {% if filters.category == 'Work' %}selected{% endif %}>Work</option>
+                    <option value="Personal" {% if filters.category == 'Personal' %}selected{% endif %}>Personal
+                    </option>
+                    <option value="Study" {% if filters.category == 'Study' %}selected{% endif %}>Study</option>
+                    <option value="Health" {% if filters.category == 'Health' %}selected{% endif %}>Health</option>
+                    <option value="Other" {% if filters.category == 'Other' %}selected{% endif %}>Other</option>
+                </select>
+            </div>
+            <div class="col">
+                <button type="submit" class="btn btn-primary">Filter</button>
+                <!-- Reset Filter Button -->
+                <a href="{% url 'task_dashboard' user.id %}" class="btn btn-secondary">Reset Filters</a>
+            </div>
+        </div>
     </form>
 
-    <!-- Delete Confirmation Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete Task?</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to delete this task? This action cannot be undone.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                        aria-label="Close">Close</button>
-                    <a id="delete-confirm" href="#" class="btn btn-danger" aria-label="Confirm deletion">Delete</a>
-                </div>
+    {% if upcoming_tasks %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Category</th>
+                <th>Due Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in upcoming_tasks %}
+            <tr>
+                <td>{{ task.title }}</td>
+                <td>{{ task.description }}</td>
+                <td>{{ task.priority }}</td>
+                <td>{{ task.status }}</td>
+                <td>{{ task.category }}</td>
+                <td>{{ task.due_date }}</td>
+                <td>
+                    <a href="{% url 'task_edit' user.id task.id %}">Edit</a> |
+                    <a href="#" class="btn btn-danger delete-btn" data-task-id="{{ task.id }}"
+                        data-user-id="{{ user.id }}" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                        aria-label="Delete task {{ task.id }}">Delete</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7">No tasks due in the next 7 days.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No tasks due in the next 7 days.</p>
+    {% endif %}
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete Task?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this task? This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    aria-label="Close">Close</button>
+                <a id="delete-confirm" href="#" class="btn btn-danger" aria-label="Confirm deletion">Delete</a>
             </div>
         </div>
     </div>
