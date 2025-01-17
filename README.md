@@ -239,25 +239,33 @@ For body text, Inter was chosen due to its simplicity and excellent legibility, 
 ### Colour
 The following colour palette was used in the project:
 
-![colour_palette](/readme_images/colours/cedar_and_flame_colour_palette.png)
+![colour_palette](/readme_images/colours/colour_palette.png)
 
-<!-- List Colours - and significance -->
+- **#F5F7FA (Anti-Flash White):** Used for body text, providing readability on dark backgrounds and ensuring clarity for users.
+- **#42C5F5 (Vivid Sky Blue):** Highlights important elements like headings, links, and buttons, drawing attention to key actions such as navigation and form submissions.
+- **#1A3744 (Gunmetal):** Used as the primary background color to create a dark, professional atmosphere while maintaining contrast with lighter text for readability.
+- **#081424 (Rich Black):** Applied to footer backgrounds and certain section overlays to separate content areas, adding depth and focus to the design.
 
 #### _Colour Contrast (Font against Background)_
 
-<!-- Coolers contrast checker - foreground v background -->
-
 <details>
-<summary>#F5F5F5 (White Smoke) and #333333 (Jet)</summary>
+<summary>#F5F7FA (Anti-Flash White) and #1A3744 (Gunmetal)</summary>
 
-![contrast-white_smoke-jet](/readme_images/colours/contrast-white_smoke-jet.png)
+![anti_flash_white-gunmetal](/readme_images/colours/anti_flash_white-gunmetal.png)
 
 </details>
 
 <details>
-<summary>#F5F5F5 (White Smoke) and #444444 (Onyx)</summary>
+<summary>#F5F7FA (Anti-Flash White) and #081424 (Rich Black)</summary>
 
-![contrast-white_smoke-onyx](/readme_images/colours/contrast-white_smoke-onyx.png)
+![anti_flash_white-rich_black](/readme_images/colours/anti_flash_white-rich_black.png)
+
+</details>
+
+<details>
+<summary>#42C5F5 (Vivid Sky Blue) and #1A3744 (Gunmetal)</summary>
+
+![vivid_sky_blue-gunmetal](/readme_images/colours/vivid_sky_blue-gunmetal.png)
 
 </details>
 
