@@ -221,7 +221,6 @@ form.login .secondaryAction:hover {
     background-color: #42C5F5;
 }
 
-
 /* sign up */
 
 .signup-container {
@@ -233,7 +232,6 @@ form.login .secondaryAction:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Remove bullet points and extra space from any unordered list */
 .signup-container ul {
     list-style-type: none;
     padding-left: 0;
@@ -370,8 +368,6 @@ form.signup input[type="password"] {
 }
 
 /* ------------ Dashboard page  -----------------------*/
-/* Styling for the Add Task page (matching login/signup form) */
-
 /* Main container for task form */
 .crud-container {
     max-width: 600px;
@@ -421,7 +417,6 @@ form.signup input[type="password"] {
     border-color: #42C5F5;
 }
 
-/* Styling for the Description Field (Text Area) */
 .task-form textarea {
     padding: 12px;
     font-size: 1rem;
@@ -431,17 +426,15 @@ form.signup input[type="password"] {
     color: #F5F7FA;
     box-sizing: border-box;
     width: 100%;
-    resize: vertical; /* Allows users to resize the text area vertically */
-    min-height: 150px; /* Set a minimum height for the text area */
+    resize: vertical;
+    min-height: 150px;
 }
 
-/* Focused Description Field */
 .task-form textarea:focus {
     outline: none;
     border-color: #42C5F5;
 }
 
-/* Submit Button Styling */
 .task-form button {
     padding: 12px;
     font-size: 1rem;
@@ -460,9 +453,7 @@ form.signup input[type="password"] {
     background-color: #167EA0;
 }
 
-/* Link Styling (Back to Dashboard) */
 .task-form .secondaryAction {
-    /* background-color: transparent; */
     color: #42C5F5;
     border: 1px solid #42C5F5;
     padding: 10px;
@@ -481,7 +472,6 @@ form.signup input[type="password"] {
     background-color: #42C5F5;
 }
 
-/* Styling for the Date Field */
 .task-form input[type="date"] {
     padding: 12px;
     font-size: 1rem;
@@ -497,7 +487,6 @@ form.signup input[type="password"] {
     border-color: #42C5F5;
 }
 
-/* Styling for Select Fields (priority, status, category) */
 .task-form select {
     padding: 12px;
     font-size: 1rem;
@@ -513,13 +502,12 @@ form.signup input[type="password"] {
     border-color: #42C5F5;
 }
 
-/* Consistent styling for 'Create Task' button in task dashboard */
 .custom-btn {
     padding: 12px;
     font-size: 1rem;
     border-radius: 5px;
     font-weight: 600;
-    background-color: #42C5F5; 
+    background-color: #42C5F5;
     color: #081424;
     border: none;
     cursor: pointer;
