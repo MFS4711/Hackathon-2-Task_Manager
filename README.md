@@ -64,7 +64,7 @@ The primary users of the Task Management App are individuals looking for an effe
 
 Built with simplicity and adaptability in mind, the Task Management App empowers individuals to manage their workloads effectively and achieve their goals with ease.
 
-![responsivenes_screenshot](/readme_images/responsiveness_image.png)
+![responsivenes_screenshot](/readme_images/responsiveness_screenshot.png)
 
 ---
 
@@ -176,9 +176,15 @@ The following pages are only available to logged in users.
 <details>
 <summary>Dashboard Page</summary>
 
-<!-- REMOVE WHEN SECTION COMPLETED -->
+For logged-in users, this page displays the unique dashboard with the user's individual tasks arranged in a filterable table.
 
-![Book a Table Page](/readme_images/features)
+There are clear buttons to create/edit/delete tasks which will direct the user to the relevant page.
+
+The table can be filtered by status, category, due date or priority - so giving users the ability to have the desired overview of tasks. 
+
+Further to this, should there be overdue tasks, these will be displayed in a clear section highlighted red to draw the user's attention.
+
+![Task Dashboard Page](/readme_images/features/features_dashboard.png)
 
 </details>
 
@@ -187,14 +193,15 @@ The following pages are only available to logged in users.
 
 This is the standard allauth logout page, with a button to logout.
 
-![Booking Success](/readme_images/features/features_logout.png)
+![Logout page](/readme_images/features/features_logout.png)
 
 </details>
 
 
 ## Future Features
-<!-- REMOVE WHEN SECTION COMPLETED -->
-<!-- List Future Features -->
+- **Chart.js Integration for Admin Analytics**: Leverage Chart.js or similar libraries to provide detailed visual analytics for administrators, offering insights into orders, revenue, and customer behavior.
+- **Iteration 2 - UX Enhancements**: Calendars/analytics  
+- **Iteration 3 - Gamification**: Reward users for completing tasks to provide greater motivation/UX
 
 ---
 
@@ -394,9 +401,9 @@ This app does not contain any models. It is designed to serve as a container for
 
 ## Data Validation
 
-<!-- REMOVE WHEN SECTION COMPLETED -->
+Clean and Save Methods have been used in the model to ensure data integrity/validity - this is evident in controlling transition of status' as well as marking tasks overdue.
 
-<!-- Any specific custom validation - Js/python -->
+The Django Data Widget mitigates the possibility of a past date being selected via the implementation of the min attribute.
 
 ---
 
@@ -442,7 +449,24 @@ The manual testing of features is organised by app below. Testing was carried ou
 
 |Page|Feature|Action|Effect|
 |---|---|---|---|
-|/customer-dashboard/<int:user_id>/|Unauthorised user - attempt to access a customer dashboard|Search customer-dashboard/n (n is any integer)|User is redirected to the homepage with an error message advising unauthorised access|
+|/task-dashboard/<int:user_id>/|Unauthorised user - attempt to access a user dashboard|Search task-dashboard/n (n is any integer)|User is redirected to the homepage with an error message advising unauthorised access|
+|/task-dashboard/<int:user_id>/|authorised user - attempt to access a user dashboard|Search task-dashboard/n (n is user integer)|User can view dashboard|
+|/task-dashboard/<int:user_id>/|create a task|click create task button|User redirected to create task page|
+|/task-dashboard/<int:user_id>/|edit a task|click edit button|User redirected to edit task page|
+|/task-dashboard/<int:user_id>/|delete a task|click delete button|User displayed modal requesting confirmation of deletion|
+|/task-dashboard/<int:user_id>/|Filter by status|select status from dropdown and click filter|Page reloads showing table filtered by selected status|
+|/task-dashboard/<int:user_id>/|Filter by pritority|select priorty from dropdown and click filter|Page reloads showing table filtered by selected priority|
+|/task-dashboard/<int:user_id>/|Filter by category|select category from dropdown and click filter|Page reloads showing table filtered by selected category|
+|/task-dashboard/<int:user_id>/|Filter by date|select date period from dropdown and click filter|Page reloads showing table filtered by selected date duration|
+|/task-dashboard/<int:user_id>/|Filter by combination of date/status/priority/category|select a variety of values from each dropdown and click filter|Page reloads showing table filtered by selected combination of date/status/priority/category|
+|/task-dashboard/<int:user_id>/|Reset filters|click reset filter|Page reloads showing table filtered by default selection|
+|/task-add/<int:user_id>/|Create Task form|click create task in task-dashboard|Access to create task page|
+|/task-add/<int:user_id>/|Create Task form -  valid|enter valid details and click submit|Redirected to task dashboard with message task successfully created|
+|/task-add/<int:user_id>/|Create Task form -  invalid|enter invalid details and click submit|page reloads with error message|
+|/task-add/<int:user_id>/|Create Task form -  invalid date|attempt to pick invalid date|page reloads with error message|
+|/task-add/<int:user_id>/|Create Task form -  cancel creation|click back to dashboard|redirected to user dashboard|
+|/task-edit/<int:user_id>/|edit Task form|click edit button in task-dashboard|view edit page with form pre-filled with existing task information|
+|/task-edit/<int:user_id>/|edit Task form -  cancel creation|click back to dashboard|redirected to user dashboard|
 |||||
 </details>
 
@@ -495,11 +519,9 @@ All python code is validated by the [Flake8 linter](https://flake8.pycqa.org/en/
 
 - views.py
 
-![core_views_python_validation](/readme_images/python_validation/core_views_python_validation.png)
+![core_views_python_validation](/readme_images/python_validation/core-views.py-python_validation.png)
 
 </details>
-
-<!-- In style below -->
 
 <details>
 <summary>Task Management App</summary>
@@ -510,33 +532,19 @@ All python code is validated by the [Flake8 linter](https://flake8.pycqa.org/en/
 
 - forms.py
 
-![booking_forms_python_validation](/readme_images/python_validation)
+![task_management-forms-python_validation](/readme_images/python_validation/task_management-forms.py-python_validation.png)
 
 - views.py
 
-![booking_views_python_validation](/readme_images/python_validation)
+![task_management-views-python_validation](/readme_images/python_validation/task_management-views.py-python_validation.png)
 
 - admin.py
 
-![booking_admin.py_python_validation](/readme_images/python_validation)
-
-- utils.py
-
-![booking_utils_python_validation](/readme_images/python_validation)
+![task_management_admin.py_python_validation](/readme_images/python_validation/task_management-admin.py-python_validation.png)
 
 - test_models.py
 
 ![task_management-test_models.py-python_validation](/readme_images/python_validation/task_management-test_models.py-python_validation.png)
-
-- test_forms.py
-
-![task_management-test_models.py-python_validation](/readme_images/python_validation)
-
-- test_views.py
-
-![task_management-test_models.py-python_validation](/readme_images/python_validation)
-
-
 
 </details>
 
@@ -547,7 +555,7 @@ All JavaScript code is validated by the [ESLint](https://eslint.org/) (installed
 <details>
 <summary>Task Management App</summary>
 
-![booking_js-validation](/readme_images/js_validation/booking_js-validation.png)
+![task_management_js_validation](/readme_images/js_validation/task_management_js_validation.png)
 
 </details>
 
@@ -590,11 +598,9 @@ In both cases, the status of each issue will indicate whether the user story has
 
 ### Testing django views, models and forms
 
-<!-- Description in style below -->
+Comprehensive automated testing of the Models for the Task Management has been completed and data integrity as well as transition of task status' was ensured.
 
-Comprehensive automated testing can be seen for the Menu App where all CRUD functionalities are tested. This has partially been completed for the Booking App where the models are comprehensively tested but the forms/views are only partially tested as a related bug was being addressed.
-
-Testing of the Booking Form raised an issue regarding the form validation preventing a user to submit a booking within two days of now. This issue has been mitigated through a django date widget which has been rendered to not allow selection of the invalid dates.
+Testing of the Forms and Views has not been completed primarily due to losing team members throughout this project and thus leading to a lack of time to implement for the remaining members.
 
 ---
 
@@ -604,16 +610,11 @@ Testing of the Booking Form raised an issue regarding the form validation preven
 
 This section provides an overview of the bugs encountered during development, along with their resolutions. Any remaining issues or notable fixes are also tracked for reference.
 
-Several bugs encountered during development and their solutions are documented in the GitHub issues tracker. Some notable examples include:
-
-<!-- REMOVE WHEN SECTION COMPLETED -->
-
-<!-- Add issues in Github and link in list below - Add comments of fixes in Issue -->
-- [BUG - ]()
+There were no notable bugs found although extensive testing has not been possible due to loss of team members.
 
 ## Remaining Bugs
 
-There are hopefull no bugs remaining.
+There are hopefully no bugs remaining.
 
 ---
 
@@ -700,7 +701,6 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 4. Create an `env.py` file with the following environment variables:
     - `BASE_URL`: The root URL for the local dev project (usually `http://localhost:8000/`).
     - `DATABASE_URL`: The URL generated by Heroku (see the deployment section).
-    - `CLOUDINARY_URL`: The URL provided by Cloudinary for storing media files. You can obtain this by signing up on [Cloudinary](https://cloudinary.com/) and generating your API credentials.
     - `DEBUG`: Set this to `True` for local development.
     - `PORT`: Default Django port, typically 8000.
     - `SECRET_KEY`: The Django secret key.
@@ -710,15 +710,13 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 [Return to top](#focusflow)
 
 # Credits
-<!-- REMOVE WHEN SECTION COMPLETED -->
-<!-- List Credit - Sources of images, research or code attributions -->
 
 - [MFS4711 - Restaurant Web App Readme Template](https://github.com/MFS4711/Restaurant-Web-App)
 
 
 # Acknowledgements
-<!-- REMOVE WHEN SECTION COMPLETED -->
-<!-- Acknowledgements paragraph -->
+
+We would like to acknowledge our team members who put effort into creating a functional product. ALthough it is not as refined as initially desired, mitigating circumstances were overcome during the development.
 
 ---
 

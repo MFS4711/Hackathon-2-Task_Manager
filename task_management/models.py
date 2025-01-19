@@ -1,10 +1,46 @@
+from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
-from django.db import models
 from django.utils import timezone
 
 
 class Task(models.Model):
+    """
+    Represents a task in a task management system.
+
+    This model stores the details of a task, including its title,
+    description, assigned user, priority, status, category, due date,
+    and timestamps for creation and updates. The task has various states
+    and constraints that ensure data integrity
+    (e.g., valid due dates, valid status transitions).
+
+    Attributes:
+        user (ForeignKey): The user who is assigned the task.
+        title (str): The title or name of the task.
+        description (str): A detailed description of the task.
+        priority (str): The priority of the task, chosen from predefined
+        priority options.
+        status (str): The current status of the task, chosen from
+        predefined status options.
+        category (str): The category of the task, chosen from predefined
+        categories (e.g., Work, Personal).
+        due_date (DateField): The due date for completing the task.
+        created_at (DateTimeField): The timestamp when the task
+        was created.
+        updated_at (DateTimeField): The timestamp when the task
+        was last updated.
+
+    Methods:
+        __str__(): Returns the title of the task as its
+        string representation.
+        save(): Overrides the default save method to automatically set
+        the task's status to 'Overdue' if the due date has passed and
+        the task is still in a pending state.
+        clean(): Custom validation to ensure that due dates are not in
+        the past and that status transitions follow business rules
+        (e.g., a task can only be marked 'Completed' if it was
+        'In Progress').
+    """
     # Priority Choices
     HIGH = 'High'
     MEDIUM = 'Medium'
