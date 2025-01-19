@@ -445,8 +445,6 @@ The manual testing of features is organised by app below. Testing was carried ou
 <details>
 <summary>Dashboard App</summary>
 
-<!-- REMOVE WHEN SECTION COMPLETED -->
-
 |Page|Feature|Action|Effect|
 |---|---|---|---|
 |/task-dashboard/<int:user_id>/|Unauthorised user - attempt to access a user dashboard|Search task-dashboard/n (n is any integer)|User is redirected to the homepage with an error message advising unauthorised access|
@@ -480,15 +478,9 @@ The results are displayed by page below:
 <details>
 <summary>Lighthouse results by page</summary>
 
-<!-- REMOVE WHEN SECTION COMPLETED -->
-
 - Homepage (Landing Page)
 
-![index_lighthouse](readme_images/lighthouse/index_lighthouse.png)
-
-- ... Page
-
-![menu_lighthouse](readme_images/lighthouse/menu_lighthouse.png)
+![index_lighthouse](readme_images/lighthouse/home_lighthouse.png)
 
 - Contact Page
 
@@ -503,8 +495,6 @@ The results are displayed by page below:
 ![signup_lighthouse](readme_images/lighthouse/signup_lighthouse.png)
 
 - All other pages are protected so are inaccessible with the lighthouse extension
-
-![protected_lighthouse](readme_images/lighthouse/protected_lighthouse.png)
 
 </details>
 
@@ -668,7 +658,7 @@ This section outlines the steps required to deploy your project to Heroku, ensur
 
 6. In your **local repository**, add a **Procfile** to the root directory with this content:
 
-    `web: gunicorn title.wsgi`
+    `web: gunicorn task_manager_project.wsgi`
 
 7. Add your Heroku app URL to the `ALLOWED_HOSTS` list in `settings.py`.
 
