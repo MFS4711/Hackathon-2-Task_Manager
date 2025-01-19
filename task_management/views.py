@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.contrib import messages
@@ -7,12 +8,19 @@ from .forms import TaskForm
 from .models import Task
 
 
+@login_required(login_url='/accounts/login/')
 def task_dashboard(request, user_id):
+    """
+
+    """
+    # Ensure the logged-in user matches the user_id in the URL
+    if request.user.id != int(user_id):
+        # add an error message and redirect to the homepage.
+        messages.error(request, "You are not authorised to access this page.")
+        return redirect('/')
+
     # Fetch the user by user_id
     user = get_object_or_404(User, id=user_id)
-
-    if user != request.user:
-        raise Http404("You need to log in to view this page.")
 
     # Get today's date and the date 7 days from today, 2 weeks, and a month
     today = timezone.now().date()
@@ -29,7 +37,8 @@ def task_dashboard(request, user_id):
         'status': request.GET.get('status', ''),
         'priority': request.GET.get('priority', ''),
         'category': request.GET.get('category', ''),
-        'visibility': request.GET.get('visibility', '7_days')  # Default to 7 days
+        # Default to 7 days
+        'visibility': request.GET.get('visibility', '7_days')
     }
 
     # Determine the visibility filter
@@ -76,14 +85,18 @@ def task_dashboard(request, user_id):
     return render(request, "task_management/task-dashboard.html", context)
 
 
+@login_required(login_url='/accounts/login/')
 def task_add(request, user_id):
     """
     View to add a new task
     """
-    user = get_object_or_404(User, id=user_id)
+    # Ensure the logged-in user matches the user_id in the URL
+    if request.user.id != int(user_id):
+        # add an error message and redirect to the homepage.
+        messages.error(request, "You are not authorised to access this page.")
+        return redirect('/')
 
-    if user != request.user:
-        raise Http404("You need to log in to view this page.")
+    user = get_object_or_404(User, id=user_id)
 
     if request.method == "POST":
         task_form = TaskForm(data=request.POST)
@@ -105,14 +118,18 @@ def task_add(request, user_id):
     return render(request, 'task_management/add-task.html', context)
 
 
+@login_required(login_url='/accounts/login/')
 def task_edit(request, user_id, task_id):
     """
     View to edit a task
     """
-    task = get_object_or_404(Task, pk=task_id)
+    # Ensure the logged-in user matches the user_id in the URL
+    if request.user.id != int(user_id):
+        # add an error message and redirect to the homepage.
+        messages.error(request, "You are not authorised to access this page.")
+        return redirect('/')
 
-    if task.user != request.user:
-        raise Http404("You cannot edit this task.")
+    task = get_object_or_404(Task, pk=task_id)
 
     if request.method == "POST":
         # Initializes the form with the instance of task pre-filled
@@ -140,10 +157,17 @@ def task_edit(request, user_id, task_id):
     return render(request, 'task_management/update-task.html', context)
 
 
+@login_required(login_url='/accounts/login/')
 def task_delete(request, user_id, task_id):
     """
     View to delete a task
     """
+    # Ensure the logged-in user matches the user_id in the URL
+    if request.user.id != int(user_id):
+        # add an error message and redirect to the homepage.
+        messages.error(request, "You are not authorised to access this page.")
+        return redirect('/')
+
     task = get_object_or_404(Task, pk=task_id)
 
     if task.user == request.user:
